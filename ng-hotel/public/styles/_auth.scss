@@ -1,0 +1,90 @@
+/* Centrage des boîtes de formulaires sur la page */
+.contact-form-container {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Redéfinition globale de l'élément form pour ces pages */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: transparent; /* Hérite du fond de .contact-form-container */
+  padding: 0;
+  width: 100%;
+}
+
+/* Style uniforme pour les conteneurs d'inputs */
+.Form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.Form-group label {
+  text-align: left;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.Form-group input {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 0.95rem;
+  width: 100%;
+  box-sizing: border-box; /* Évite que l'input dépasse de sa boîte */
+  transition: border-color 0.2s ease-in-out;
+}
+
+.Form-group input:focus {
+  border-color: #d1b274; /* Couleur Or */
+  outline: none;
+}
+
+/* Style des boutons dorés */
+.btn-submit {
+  background-color: #d1b274;
+  color: #121212;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-size: 1rem;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #b99350;
+  color: #fff;
+}
+
+.btn-submit:disabled {
+  background-color: #444;
+  color: #888;
+  cursor: not-allowed;
+}
+
+/* Texte de bas de page (liens de redirection) */
+.redirect-text {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.redirect-text a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.redirect-text a:hover {
+  text-decoration: underline;
+}

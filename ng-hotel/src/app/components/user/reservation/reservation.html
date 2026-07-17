@@ -1,0 +1,72 @@
+<div class="container">
+    <h1> Les Hôtels disponibles</h1>
+    <form [formGroup]="searchForm" (ngSubmit)="searchHotels()" class="d-flex" role="search" id="searchForm" action="/hotel-search" method="GET">
+        
+        <div class="Form-group">
+            <label for="ville">Ville:</label>
+            <input type="text" id="ville" name="ville" class="form-control" formControlName="ville" placeholder="Entrez la ville">
+            @if (searchForm.get('ville')?.invalid && searchForm.get('ville')?.touched) {
+  <div class="text-danger">
+    Please enter a valid city.
+  </div>
+}
+        </div>
+        <div class="Form-group">
+            <label for="codePostal">Code Postal:</label>
+            <input type="text" id="codePostal" name="codePostal" class="form-control" formControlName="codePostal" placeholder="Entrez le code postal">
+            @if (searchForm.get('codePostal')?.invalid && searchForm.get('codePostal')?.touched) {
+  <div class="text-danger">
+    Please enter a valid postal code (5 digits).
+  </div>
+}
+        </div>
+        <div class="Form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" class="form-control" formControlName="date">
+            @if (searchForm.get('date')?.invalid && searchForm.get('date')?.touched) {
+  <div class="text-danger">
+    Please select a valid date.
+  </div>
+}
+        </div>
+        <div class="Form-group">
+  <label for="personnes">Nombre de personnes:</label>
+  <input type="number" id="personnes" name="personnes" class="form-control" formControlName="personnes" placeholder="Entrez le nombre de personnes">
+  @if (searchForm.get('personnes')?.invalid && searchForm.get('personnes')?.touched) {
+    <div class="text-danger">
+      Please enter a valid number of people (1 or more).
+    </div>
+  }
+</div>
+       
+        <button class="btn btn-outline-success" id="searchButton" type="submit" (click)="searchHotels()">Search</button>
+        
+
+    </form>
+
+
+
+
+
+
+
+    
+    <!-- Liste des Hôtels disponibles -->  
+     
+    <div class="content">
+        <div class="block">
+            <img src="../../../assets/images/hotel1.jpg" alt="Hotel 1" class="hotel-image"/>
+        </div>
+        <div class="block">
+            <h1>Name$hotel</h1>
+            <p>Location$hotel</p>
+            <h3><strong>Price$hotel</strong></h3>
+            <p>Description$hotel</p>
+            <p>Rating$hotel</p>
+            <button class="btn btn-primary">Voir les détails</button>
+        </div>
+
+    </div>
+     
+     
+</div>

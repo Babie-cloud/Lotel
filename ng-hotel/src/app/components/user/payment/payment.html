@@ -1,0 +1,48 @@
+@if (selectedHotel && !isPaying) {
+  <div class="hotel-detail">
+    <h2>{{ selectedHotel.nom }}</h2>
+    <img [src]="selectedHotel.image" [alt]="selectedHotel.nom"/>
+    <p>{{ selectedHotel.adresse }}, {{ selectedHotel.codePostal }} {{ selectedHotel.ville }}</p>
+    <p>{{ selectedHotel.description }}</p>
+    <p><strong>{{ selectedHotel.prix }} € / nuit</strong>, {{ selectedHotel.chambresDisponibles }} chambres disponibles</p>
+    <button class="btn btn-success" (click)="goToPayment(selectedHotel)">Payer</button>
+  </div>
+}
+
+
+@if (isPaying) {
+  <div class="payment-container">
+    <h2>Paiement de la réservation</h2>
+
+    @if (isLoading) {
+      <p>Chargement du formulaire de paiement...</p>
+    }
+
+    @if (montant !== null) {
+      <p class="montant">Montant à régler : <strong>{{ montant }} €</strong></p>
+    }
+
+    <div id="payment-element"></div>
+
+    @if (errorMessage) {
+      <p class="text-danger">{{ errorMessage }}</p>
+    }
+
+    @if (successMessage) {
+      <p class="text-success">{{ successMessage }}</p>
+    }
+
+    <div class="actions">
+      <!-- Appel de la méthode de retour -->
+      <button class="btn btn-secondary" (click)="goBack()" [disabled]="isProcessing">Retour</button>
+      
+      <button
+        class="btn btn-primary"
+        (click)="onSubmit()"
+        [disabled]="isLoading || isProcessing || successMessage"
+      >
+        {{ isProcessing ? 'Traitement en cours...' : 'Payer maintenant' }}
+      </button>
+    </div>
+  </div>
+}

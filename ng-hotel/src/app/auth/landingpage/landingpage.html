@@ -1,0 +1,204 @@
+<!-- Navigation Bar -->
+ <nav
+      class="navbar navbar-expand-md bg-dark sticky-top border-bottom"
+      data-bs-theme="dark"
+    >
+      <div class="container">
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvas"
+          aria-controls="offcanvas"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvas"
+          aria-labelledby="offcanvasLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLabel">Aperture</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav flex-grow-1 justify-content-between">
+              <li class="nav-item">
+                <a class="nav-link" href="#" aria-label="Aperture">
+                  <svg class="bi" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#aperture"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="nav-item"><a class="nav-link text-gold" href="#">Acceuil</a></li>
+              <li class="nav-item"><a class="nav-link text-gold" href="#mission">About us</a></li>
+              <li class="nav-item">
+                <a class="nav-link text-gold" href="#service">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-gold" href="#testimonial">Testimonial</a>
+              </li>
+              <li class="nav-item"><a class="nav-link text-gold" href="#contact">Contact US</a></li>
+              <li class="nav-item">
+                <a class="nav-link text-gold" routerlink="/user-dashboard" (click)="hotel()">Voir les hôtels</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" aria-label="Cart">
+                  <svg class="bi" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#cart"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+<!-- End of Navigation Bar -->
+
+<!--================================================================= -->
+<header class="hero-section">
+  <div class="hero-content">
+    <h1 class="display-3">WELCOME AT MONOTEL</h1>
+    <h3 class="hero-subtitle">Build anything you want with LOVE</h3>
+    <div class="hero-buttons">
+      <a class="btn btn-outline" routerLink="/login" (click)="OpenLogin()">Connexion</a>
+      <a class="btn btn-filled" routerLink="/signup" (click)="OpenSignup()">Inscription</a>
+    </div>
+  </div>
+</header>
+
+<section class="container py-5" id="mission">
+  <h2 class="section-title">Our mission</h2>
+  <div class="grid-2-cols">
+    <div class="card bg-dark-card">
+      <div class="card-body">
+        <p>We offer a wide range of services to meet your needs and ensure a comfortable stay.</p>
+      </div>
+    </div>
+    <div class="card bg-dark-card image-card">
+      <img src="./service.jpg" alt="Our Values" class="card-img"/>
+    </div>
+  </div>
+</section>
+
+<section class="container py-5" id="service">
+  <h2 class="section-title">Our Services</h2>
+  <div class="grid-2-cols">
+    <div class="card bg-dark-card">
+      <div class="card-body">
+        <p>We offer a wide range of services to meet your needs and ensure a comfortable stay.</p>
+      </div>
+    </div>
+    <div class="card bg-dark-card image-card">
+      <img src="./service.jpg" alt="Our Services" class="card-img"/>
+    </div>
+  </div>
+</section>
+
+<section class="container py-5" id="testimonial">
+  <h2 class="section-title">Testimonials</h2>
+  <div class="grid-3-cols">
+    
+    <div class="card testimonial-card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('unsplash-photo-1.jpg')">
+      <div class="testimonial-content">
+        <h3>"Short title, long jacket"</h3>
+        <span class="location"><small>Toulouse</small></span>
+      </div>
+    </div>
+
+    <div class="card testimonial-card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=600')">
+      <div class="testimonial-content">
+        <h3>"Much longer title that wraps to multiple lines"</h3>
+        <span class="location"><small>Paris</small></span>
+      </div>
+    </div>
+
+    <div class="card testimonial-card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./visualsofdana-T5pL6ciEn-I-unsplash.jpg')">
+      <div class="testimonial-content">
+        <h3>"Another longer title belongs here"</h3>
+        <span class="location"><small>Lille</small></span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contactez-nous</h2>
+  <p>Une question, une réservation ou une demande spéciale ? Écrivez-nous !</p>
+  <div class="contact-container">
+    <div class="contact-info">
+      <h4>Informations</h4>
+      <p>Adresse : <a href="#" target="_blank">22 Imp. Charles Fourier, Toulouse</a></p>
+      <p>Téléphone : <a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+      <p>Email : <a href="mailto:contact@lebongourmet.fr">contact@monotel.fr</a></p>
+      <h4>Horaires d'ouverture</h4>
+      <p>Lundi - Vendredi : 9:00 – 23:30</p>
+      <p>Samedi : 10:00 – 00:00</p>
+      <p>Dimanche : 9:00 – 12:00</p>
+    </div>
+    <div class="contact-form-container">
+      <h4>Envoyez-nous un message</h4>
+      <form class="contact-form">
+        <div class="Form-group">
+          <label for="name">Nom :</label>
+          <input type="text" id="name" placeholder="Votre nom" required />
+        </div>
+        <div class="Form-group">
+          <label for="email">Email :</label>
+          <input type="email" id="email" placeholder="Votre email" required />
+        </div>
+        <div class="Form-group">
+          <label for="message">Message :</label>
+          <textarea id="message" placeholder="Votre message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-submit">Envoyer</button>
+      </form>
+    </div>
+  </div>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.1109113503967!2d1.4297639752871065!3d43.625050454252374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb4dbf6a09c5%3A0x4162a301f8b52011!2s22%20Imp.%20Charles%20Fourier%2C%2031200%20Toulouse!5e0!3m2!1sfr!2sfr!4v1761589591771!5m2!1sfr!2sfr" width="100%" height="400" style="border:0;" loading="lazy"></iframe>
+  </div>
+</section>
+
+<footer class="main-footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h5>About us</h5>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Values</h5>
+      <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col newsletter-col">
+      <h5>Subscribe to our newsletter</h5>
+      <p>Monthly digest of what's new and exciting from us.</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Email address" />
+        <button class="btn btn-submit btn btn-filled " type="button">Subscribe</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Monotel, Inc. All rights reserved.</p>
+  </div>
+</footer>

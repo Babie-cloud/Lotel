@@ -1,0 +1,54 @@
+name: Vérification de l'application (AngularJS + ExpressJS)
+
+# Déclencheur : On lance le robot à chaque fois que vous faites un "git push"
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  # --- JOB 1 : VÉRIFICATION DU BACKEND (EXPRESS) ---
+  verification-backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./backend # GitHub se place dans votre dossier Express
+
+    steps:
+    - name: Récupérer le code du dépôt
+      uses: actions/checkout@v4
+
+    - name: Installer Node.js pour Express
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20' # Version stable moderne de Node.js
+
+    - name: Installer les dépendances d'Express (node_modules)
+      run: npm ci
+
+    - name: Lancer les tests Express
+      run: npm test --if-present
+
+
+  # --- JOB 2 : VÉRIFICATION DU FRONTEND (ANGULARJS) ---
+  verification-frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend # GitHub se place dans votre dossier Angular
+
+    steps:
+    - name: Récupérer le code du dépôt
+      uses: actions/checkout@v4
+
+    - name: Installer Node.js pour Angular
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18' # Parfois les vieux projets Angular préfèrent Node 16 ou 18. À ajuster si besoin !
+
+    - name: Installer les dépendances d'Angular
+      run: npm ci
+
+    - name: Lancer les tests Angular / Build
+      run: npm test --if-present
