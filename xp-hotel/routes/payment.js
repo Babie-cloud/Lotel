@@ -6,7 +6,7 @@ router.post('/create-intent', async (req, res) => {
   try {
     if (!process.env.STRIPE_SECRET_KEY) {
       return res.status(500).json({
-        message: 'STRIPE_SECRET_KEY manquante. Ajoute-la dans xp-hotel/.env',
+        message: 'une clé est manquante!',
       });
     }
 
