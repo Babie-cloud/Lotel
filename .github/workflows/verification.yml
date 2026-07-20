@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./backend # GitHub se place dans votre dossier Express
+        working-directory: ./backend 
 
     steps:
     - name: Récupérer le code du dépôt
@@ -22,7 +22,7 @@ jobs:
     - name: Installer Node.js pour Express
       uses: actions/setup-node@v4
       with:
-        node-version: '20' # Version stable moderne de Node.js
+        node-version: '20' 
 
     - name: Installer les dépendances d'Express (node_modules)
       run: npm ci
@@ -45,8 +45,7 @@ jobs:
     - name: Installer Node.js pour Angular
       uses: actions/setup-node@v4
       with:
-        node-version: '18' # Parfois les vieux projets Angular préfèrent Node 16 ou 18. À ajuster si besoin !
-
+        node-version: '18' 
     - name: Installer les dépendances d'Angular
       run: npm ci
 

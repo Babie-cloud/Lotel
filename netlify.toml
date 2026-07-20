@@ -1,0 +1,14 @@
+# 1. Configuration du Build pour Angular (Frontend)
+[build]
+  command = "cd ng-hotel && npm install && npm run build -- --configuration=production"
+  publish = "ng-hotel/dist/ng-hotel/browser" # /!\ Vérifie le chemin exact de ton dossier de build Angular
+
+# 2. Configuration pour Express (Backend / Functions)
+[functions]
+  directory = "xp-hotel"
+
+# 3. Redirection pour éviter les erreurs 404 au rafraîchissement d'Angular
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
