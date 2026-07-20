@@ -6,20 +6,16 @@
     <div class="nav-search">
         <h3>Filtrez par Ville pour joindre votre destination rapidement</h3>
 
-        <form class="d-flex flex-wrap gap-2" [formGroup]="searchForm" (ngSubmit)="searchHotels()" role="search">
+        <form class="d-flex gap-2" [formGroup]="searchForm" (ngSubmit)="searchHotels()" role="search">
 
           <div class="Form-group">
-            <input
-              class="form-control me-2"
-              type="text"
-              formControlName="codePostal"
-              placeholder="Code postal ex. 31200"
-              aria-label="Code postal"
-            />
-            @if (searchForm.get('codePostal')?.invalid && searchForm.get('codePostal')?.touched) {
+            <input class="form-control me-2" type="text" formControlName="codePostal" placeholder="Code postal ex. 31200" aria-label="Code postal" />
+            @if (searchForm.get('codePostal')?.invalid && searchForm.get('codePostal')?.touched) 
+            {
               <div class="text-danger">Code postal invalide (5 chiffres).</div>
             }
           </div>
+          
 
           <div class="Form-group">
             <input
@@ -105,7 +101,7 @@
           </ul>
           </div>
 
-          <button class="btn btn-outline-success" type="submit">Rechercher</button>
+          <button class="btn border-success btn-outline-success" type="submit">Rechercher</button>
           <button class="btn btn-outline-secondary" type="button" (click)="resetSearch()">Réinitialiser</button>
         </form>
 
@@ -113,24 +109,33 @@
 
     </div>
 
-   <!-- Liste des Hôtels-->
-
      <div class="content">
     @for (hotel of hotels; track hotel.id) {
       <div class="block" (click)="showDetail(hotel)">
-        <img [src]="hotel.image" [alt]="hotel.nom" class="hotel-image"/>
-        <h1>{{ hotel.nom }}</h1>
-        <p>{{ hotel.ville }}</p>
-        <h3><strong>{{ hotel.prix }} € / nuit</strong></h3>
-        <p>{{ hotel.description }}</p>
-        <p>{{ hotel.note }}</p>
-        <button class="btn btn-primary" routerlink="/userdashboard/payment" (click)="pay()">Voir les détails</button>
+        <div class="hotel-image-wrap">
+          <img [src]="hotel.image" [alt]="hotel.nom" class="hotel-image"/>
+        </div>
+        <div class="hotel-body">
+          <h2 class="hotel-name">{{ hotel.nom }}</h2>
+          <p class="hotel-city">{{ hotel.ville }}</p>
+          <p class="hotel-price">{{ hotel.prix }} € <span>/ nuit</span></p>
+          <p class="hotel-desc">{{ hotel.description }}</p>
+          <div class="hotel-meta">
+            <span class="hotel-rating"><i class="fa-solid fa-star">{{ hotel.note }}</i></span>
+            <button
+              type="button"
+              class="btn hotel-btn"
+              (click)="showDetail(hotel); $event.stopPropagation()"
+            >
+              Réserver / Payer
+            </button>
+          </div>
+        </div>
       </div>
     } @empty {
       <p>Aucun hôtel ne correspond à ta recherche.</p>
     }
   </div>
 
-   <!-- Fiche Hôtel détaillé -->
   
 </div>

@@ -22,7 +22,7 @@ export const routes: Routes = [
     { path: 'reset-password', component: Resetpassword },
     { path: 'navbar', component: Navbar },
     { path: 'footer', component: Footer },
-     { path: 'payment', component: Payment},
+    { path: 'payment', component: Payment},
 
     {
     path: 'admin-dashboard',

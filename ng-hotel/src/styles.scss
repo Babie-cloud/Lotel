@@ -1,90 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
-img {
-  border-radius: 10px;
-}
-.bg-gold { 
-  background-color: #b99350;
-}
-.text-gold {
-  color: #b99350;
-}
-.btn {
-  border-radius: 10px;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+@use '../public/styles/variables';
+@use '../public/styles/global';
+@use '../public/styles/auth';
+
+/* ——— Base ——— */
+body {
+  margin: 0;
+  font-family: var(--font-sans);
 }
 
-button:hover {
-  background-color: #a17e3f;
-}
-
-form {
-  border-radius: 10px;
-  font-family: Arial, sans-serif;
-  color: #fff;
-  padding: 20px;
-  background-color: #2b2b2b;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  align-items: flex-start;
-}
-
-.Form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 160px;
-}
-
-.Form-group label {
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.Form-group input {
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-family: inherit;
-}
-
-.Form-group input:hover,
-.Form-group input:focus {
-  border-color: #d1b274;
-  outline: none;
-}
-
-.text-danger {
-  color: #ff6b6b;
-  font-size: 0.8rem;
-  margin-top: 2px;
-}
-
-.nav-search {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.nav-search input {
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
+/* ——— Grille hôtels (dashboard / listes) ——— */
 .container {
-  max-width: 1100px;
+  max-width: var(--container-max);
   margin: 0 auto;
   padding: 20px;
-  color: #333;
+  color: var(--color-text-dark);
 }
 
 .container h1 {
-  color: #b99350;
+  color: var(--color-gold-hover);
   margin-bottom: 20px;
 }
 
@@ -94,11 +27,13 @@ form {
   gap: 24px;
   margin-top: 24px;
 }
-
+.bg-sombre {
+   background-color: var(--color-bg-elevated);
+}
 .block {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-bg-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -114,18 +49,18 @@ form {
 .block h1 {
   font-size: 1.2rem;
   margin: 12px 12px 4px;
-  color: #333;
+  color: var(--color-text-dark);
 }
 
 .block p {
   margin: 0 12px 8px;
-  color: #666;
+  color: var(--color-text-dark-muted);
   font-size: 0.9rem;
 }
 
 .block h3 {
   margin: 0 12px 8px;
-  color: #b99350;
+  color: var(--color-gold-hover);
 }
 
 .block button {
@@ -133,117 +68,15 @@ form {
   align-self: flex-start;
 }
 
-/*Form Contact*/
-
-.contact-container {
+/* ——— Recherche navbar dashboard ——— */
+.nav-search {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  margin-bottom: 40px;
-}
-.contact  {
-  padding: 60px 40px;
-  background-color: #121212;
-  border-radius: 12px;
-  color: #f5f5f5;
-}
-h2 {
-  font-size: 36px;
-  color: #d1b274;
- 
-}
-.contact p {
-  font-size: 16px;
-  color: #ccc;
-  margin-bottom: 40px;
   align-items: center;
-  padding-bottom : 20px;
-}
-.contact-info, 
-.contact-form-container {
-  flex: 1;
-  
-}
-.contact-info {
-  text-align: left;
-  color: #f5f5f5;
-  background-color: #1c1c1c;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  gap: 10px;
 }
 
-.contact-info h4 {
-  font-size: 20px;
-  margin-bottom: 15px;
-  color: #d1b274;
-}
-
-.contact-info a {
-  color: #d1b274;
-  text-decoration: none;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
-.contact-form-container {
-  background-color: #1c1c1c;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-.contact-form-container h4 {
-  color: #d1b274;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-form label {
-  text-align: left;
-  color: #fff;
-  margin-top: 10px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  background-color: #2a2a2a;
-  color: #fff;
-  border: 1px solid #555;
-  border-radius: 8px;
-  padding: 10px;
-  margin-top: 5px;
-}
-
-.contact-form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.contact-form .btn {
-  background-color: #d1b274;
-  border: none;
-  color: #fff;
-  padding: 12px;
-  border-radius: 8px;
-  margin-top: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.contact-form .btn:hover {
-  background-color: #b99350;
-}
-
-.map-container {
-  margin-top: 30px;
-  border-radius: 12px;
-  overflow: hidden;
+.nav-search input {
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-light);
 }

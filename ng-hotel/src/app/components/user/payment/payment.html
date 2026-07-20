@@ -1,48 +1,60 @@
-@if (selectedHotel && !isPaying) {
-  <div class="hotel-detail">
-    <h2>{{ selectedHotel.nom }}</h2>
-    <img [src]="selectedHotel.image" [alt]="selectedHotel.nom"/>
-    <p>{{ selectedHotel.adresse }}, {{ selectedHotel.codePostal }} {{ selectedHotel.ville }}</p>
-    <p>{{ selectedHotel.description }}</p>
-    <p><strong>{{ selectedHotel.prix }} € / nuit</strong>, {{ selectedHotel.chambresDisponibles }} chambres disponibles</p>
-    <button class="btn btn-success" (click)="goToPayment(selectedHotel)">Payer</button>
-  </div>
-}
-
-
-@if (isPaying) {
-  <div class="payment-container">
-    <h2>Paiement de la réservation</h2>
-
-    @if (isLoading) {
-      <p>Chargement du formulaire de paiement...</p>
-    }
-
-    @if (montant !== null) {
-      <p class="montant">Montant à régler : <strong>{{ montant }} €</strong></p>
-    }
-
-    <div id="payment-element"></div>
-
-    @if (errorMessage) {
+<div class="payment-page">
+  @if (!selectedHotel) {
+    <div class="payment-empty">
+      <h2>Paiement</h2>
       <p class="text-danger">{{ errorMessage }}</p>
-    }
-
-    @if (successMessage) {
-      <p class="text-success">{{ successMessage }}</p>
-    }
-
-    <div class="actions">
-      <!-- Appel de la méthode de retour -->
-      <button class="btn btn-secondary" (click)="goBack()" [disabled]="isProcessing">Retour</button>
-      
-      <button
-        class="btn btn-primary"
-        (click)="onSubmit()"
-        [disabled]="isLoading || isProcessing || successMessage"
-      >
-        {{ isProcessing ? 'Traitement en cours...' : 'Payer maintenant' }}
-      </button>
+      <a routerLink="/userdashboard" class="btn btn-submit">Retour aux hôtels</a>
     </div>
-  </div>
-}
+  } @else if (!isPaying) {
+    <div class="hotel-detail">
+      <h2>{{ selectedHotel.nom }}</h2>
+      <img [src]="selectedHotel.image" [alt]="selectedHotel.nom" class="hotel-detail-img" />
+      <p>{{ selectedHotel.adresse }}, {{ selectedHotel.codePostal }} {{ selectedHotel.ville }}</p>
+      <p>{{ selectedHotel.description }}</p>
+      <p>
+        <strong>{{ selectedHotel.prix }} € / nuit</strong>
+         {{ selectedHotel.chambresDisponibles }} chambres disponibles
+      </p>
+      <div class="actions">
+        <a routerLink="/userdashboard" class="btn btn-secondary">Retour</a>
+        <button type="button" class="btn btn-submit" (click)="goToPayment()">Payer</button>
+      </div>
+    </div>
+  } @else {
+    <div class="payment-container">
+      <h2>Paiement — {{ selectedHotel.nom }}</h2>
+
+      @if (isLoading) {
+        <p>Chargement du formulaire de paiement...</p>
+      }
+
+      @if (montant !== null) {
+        <p class="montant">Montant à régler : <strong>{{ montant }} €</strong></p>
+      }
+
+      <div id="payment-element"></div>
+
+      @if (errorMessage) {
+        <p class="text-danger">{{ errorMessage }}</p>
+      }
+
+      @if (successMessage) {
+        <p class="text-success">{{ successMessage }}</p>
+      }
+
+      <div class="actions">
+        <button type="button" class="btn btn-secondary" (click)="goBack()" [disabled]="isProcessing">
+          Retour
+        </button>
+        <button
+          type="button"
+          class="btn btn-submit pay-now-btn"
+          (click)="onSubmit()"
+          [disabled]="isLoading || !formReady || isProcessing || !!successMessage"
+        >
+          {{ isProcessing ? 'Traitement en cours...' : 'Payer maintenant' }}
+        </button>
+      </div>
+    </div>
+  }
+</div>

@@ -1,0 +1,91 @@
+.payment-page {
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 0 1.25rem 2rem;
+}
+
+.payment-empty,
+.hotel-detail,
+.payment-container {
+  background: var(--color-bg-elevated, #1c1c1c);
+  color: var(--color-text, #f5f5f5);
+  border-radius: var(--radius-lg, 12px);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-card, 0 4px 15px rgba(0, 0, 0, 0.4));
+}
+
+.hotel-detail h2,
+.payment-container h2,
+.payment-empty h2 {
+  margin: 0 0 1rem;
+  color: var(--color-gold, #d1b274);
+}
+
+.hotel-detail-img {
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: var(--radius-md, 8px);
+  margin-bottom: 1rem;
+  background: #2b2b2b;
+}
+
+.hotel-detail p,
+.payment-container p {
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
+  color: var(--color-text-muted, #ccc);
+}
+
+.montant {
+  font-size: 1.1rem;
+}
+
+#payment-element {
+  margin: 1.25rem 0;
+  min-height: 40px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-gold, #d1b274);
+  border: 1px solid var(--color-gold, #d1b274);
+  border-radius: var(--radius-md, 8px);
+  padding: 10px 16px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background: rgba(209, 178, 116, 0.12);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.text-success {
+  color: #6bcf8e;
+}
+
+.pay-now-btn {
+  flex: 1;
+  min-width: 180px;
+  background-color: var(--color-gold, #d1b274) !important;
+  color: var(--color-text-on-gold, #121212) !important;
+
+  &:disabled {
+    background-color: #444 !important;
+    color: #888 !important;
+    cursor: not-allowed;
+  }
+}

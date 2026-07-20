@@ -1,5 +1,5 @@
-<div id="contact" class="contact">
-  <div class="contact-form-container">
+<div id="contact" class="bg-sombre contact">
+  <div class="contact-form-container bg-sombre">
     <h4>Connectez-vous</h4>
 
     <form class="contact-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
@@ -38,7 +38,7 @@
         {{ isSubmitting() ? 'Connexion en cours...' : 'Se connecter' }}
       </button>
 
-      <p class="signup-redirect">
+      <p class="redirect-text">
         Vous n'avez pas de compte ?
         <a routerLink="/signup" class="text-gold">S'inscrire</a>
       </p>

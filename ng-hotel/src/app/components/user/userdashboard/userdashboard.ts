@@ -64,12 +64,13 @@ export class Userdashboard implements OnInit {
     this.ngOnInit();
   }
 
+  /** Clic carte ou bouton → page détail + paiement */
   showDetail(hotel: Hotel): void {
     this.selectedHotel = hotel;
+    this.router.navigate(['/payment'], { state: { hotel } });
   }
 
-
-  pay() { 
-    this.router.navigate(['/payment']);
+  pay(hotel: Hotel): void {
+    this.showDetail(hotel);
   }
 }

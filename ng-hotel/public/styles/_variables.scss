@@ -1,0 +1,52 @@
+:root {
+  /* Surfaces */
+  --color-bg: #121212;
+  --color-bg-elevated: #1c1c1c;
+  --color-bg-input: #2a2a2a;
+  --color-bg-surface: #2b2b2b;
+  --color-bg-footer: #0d0d0d;
+  --color-bg-light: #ffffff;
+  --color-bg-light-muted: #f9f9f9;
+
+  /* Or / marque */
+  --color-gold: #d1b274;
+  --color-gold-hover: #b99350;
+  --color-gold-active: #a17e3f;
+
+  /* Texte */
+  --color-text: #f5f5f5;
+  --color-text-muted: #cccccc;
+  --color-text-dim: #888888;
+  --color-text-faint: #555555;
+  --color-text-dark: #333333;
+  --color-text-dark-muted: #666666;
+  --color-text-on-gold: #121212;
+
+  /* Bordures */
+  --color-border: #555555;
+  --color-border-subtle: #333333;
+  --color-border-dark: #2a2a2a;
+  --color-border-footer: #222222;
+  --color-border-light: #e0e0e0;
+  --color-border-light-soft: #eeeeee;
+
+  /* États */
+  --color-danger: #ff6b6b;
+  --color-disabled-bg: #444444;
+  --color-disabled-text: #888888;
+
+  /* Rayons */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Ombres */
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 4px 15px rgba(0, 0, 0, 0.4);
+  --shadow-dropdown: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  /* Layout */
+  --container-max: 1100px;
+  --font-sans: Arial, Helvetica, sans-serif;
+  --transition-fast: 0.2s ease;
+}

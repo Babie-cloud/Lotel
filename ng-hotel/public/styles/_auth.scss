@@ -1,20 +1,82 @@
-/* Centrage des boîtes de formulaires sur la page */
+@use 'variables';
+
+/* ——— Section contact */
+.contact {
+  padding: 60px 40px;
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  color: var(--color-text);
+}
+
+.contact > h2 {
+  font-size: 2.25rem;
+  color: var(--color-gold);
+  margin: 0 0 0.5rem;
+}
+
+.contact > p {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin: 0 0 2.5rem;
+  padding-bottom: 1.25rem;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.contact-info,
+.contact-form-container {
+  flex: 1;
+  background-color: var(--color-bg-elevated);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.contact-info {
+  text-align: left;
+  color: var(--color-text);
+  padding: 30px;
+}
+
+.contact-info h4,
+.contact-form-container h4 {
+  font-size: 1.25rem;
+  margin: 0 0 15px;
+  color: var(--color-gold);
+}
+
+.contact-info a {
+  color: var(--color-gold);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .contact-form-container {
   max-width: 480px;
   margin: 0 auto;
+  padding: 30px;
 }
 
-/* Redéfinition globale de l'élément form pour ces pages */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: transparent; /* Hérite du fond de .contact-form-container */
-  padding: 0;
   width: 100%;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
 }
 
-/* Style uniforme pour les conteneurs d'inputs */
+/* ——— Champs de formulaire ——— */
 .Form-group {
   display: flex;
   flex-direction: column;
@@ -24,67 +86,84 @@
 
 .Form-group label {
   text-align: left;
-  color: #fff;
+  color: var(--color-text);
   font-size: 0.9rem;
   font-weight: 600;
 }
 
-.Form-group input {
-  background-color: #2a2a2a;
-  color: #fff;
-  border: 1px solid #555;
-  border-radius: 8px;
+.Form-group input,
+.Form-group textarea,
+.contact-form input,
+.contact-form textarea {
+  background-color: var(--color-bg-input);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
   padding: 12px;
   font-size: 0.95rem;
+  font-family: inherit;
   width: 100%;
-  box-sizing: border-box; /* Évite que l'input dépasse de sa boîte */
-  transition: border-color 0.2s ease-in-out;
+  box-sizing: border-box;
+  transition: border-color var(--transition-fast);
+
+  &:focus {
+    border-color: var(--color-gold);
+    outline: none;
+  }
 }
 
-.Form-group input:focus {
-  border-color: #d1b274; /* Couleur Or */
-  outline: none;
+.Form-group textarea,
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
 }
 
-/* Style des boutons dorés */
+/* ——— Bouton principal or ——— */
 .btn-submit {
-  background-color: #d1b274;
-  color: #121212;
+  background-color: var(--color-gold);
+  color: var(--color-text-on-gold);
   font-weight: bold;
-  padding: 12px;
-  border-radius: 8px;
-  margin-top: 15px;
   font-size: 1rem;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  margin-top: 15px;
   width: 100%;
   border: none;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+
+  &:hover:not(:disabled) {
+    background-color: var(--color-gold-hover);
+    color: #fff;
+  }
+
+  &:disabled {
+    background-color: var(--color-disabled-bg);
+    color: var(--color-disabled-text);
+    cursor: not-allowed;
+  }
 }
 
-.btn-submit:hover {
-  background-color: #b99350;
-  color: #fff;
-}
-
-.btn-submit:disabled {
-  background-color: #444;
-  color: #888;
-  cursor: not-allowed;
-}
-
-/* Texte de bas de page (liens de redirection) */
-.redirect-text {
+/* ——— Liens de redirection (login / signup / reset) ——— */
+.redirect-text,
+.signup-redirect {
   text-align: center;
   margin-top: 15px;
   font-size: 0.9rem;
-  color: #ccc;
+  color: var(--color-text-muted);
+
+  a {
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
-.redirect-text a {
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.redirect-text a:hover {
-  text-decoration: underline;
+.map-container {
+  margin-top: 30px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
 }
