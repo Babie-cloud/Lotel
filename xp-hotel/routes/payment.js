@@ -1,13 +1,19 @@
 const express = require('express');
 const router = express.Router();
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY || 'sk_test_XXXXXXXXXXXXXXXXXXXXXXXX');
-
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 router.post('/create-intent', async (req, res) => {
   try {
-    const { hotelId, nuits } = req.body;
+    if (!process.env.STRIPE_SECRET_KEY) {
+      return res.status(500).json({
+        message: 'STRIPE_SECRET_KEY manquante. Ajoute-la dans xp-hotel/.env',
+      });
+    }
+
+    const hotelId = Number(req.body.hotelId);
+    const nuits = Number(req.body.nuits);
     const hotels = require('./hotels.json');
-    const hotel = hotels.find(h => h.id === hotelId);
+    const hotel = hotels.find((h) => h.id === hotelId);
 
     if (!hotel) {
       return res.status(404).json({ message: 'Hôtel introuvable.' });
@@ -24,14 +30,14 @@ router.post('/create-intent', async (req, res) => {
       metadata: {
         hotelId: String(hotel.id),
         hotelNom: hotel.nom,
-        nuits: String(nuits)
+        nuits: String(nuits),
       },
-      automatic_payment_methods: { enabled: true }
+      automatic_payment_methods: { enabled: true },
     });
 
     res.json({
       clientSecret: paymentIntent.client_secret,
-      montant: montantEnCentimes / 100
+      montant: montantEnCentimes / 100,
     });
   } catch (err) {
     console.error('Erreur création PaymentIntent :', err);
@@ -39,9 +45,12 @@ router.post('/create-intent', async (req, res) => {
   }
 });
 
-
 router.get('/status/:paymentIntentId', async (req, res) => {
   try {
+    if (!process.env.STRIPE_SECRET_KEY) {
+      return res.status(500).json({ message: 'STRIPE_SECRET_KEY manquante.' });
+    }
+
     const paymentIntent = await stripe.paymentIntents.retrieve(req.params.paymentIntentId);
     res.json({ status: paymentIntent.status });
   } catch (err) {

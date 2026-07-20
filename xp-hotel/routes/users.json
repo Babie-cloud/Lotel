@@ -19,5 +19,19 @@
     "password": "$2b$10$bRTU/g2hfDuxzzczn5leT.ERK2NQzK8rRUTro08Ve/XYTSWma4n62",
     "first_name": "Karlie Giona",
     "last_name": "CUBAHIRO"
+  },
+  {
+    "id": "e2e989b2-4f39-4408-ac72-920f922744e8",
+    "email": "b.bbie604@gmail.com",
+    "password": "$2b$10$Vlhw0Tq.8ZDG19CGGRJwkObUPxhfjEr01qXHyqMRvMLGDoGI/hlCS",
+    "first_name": "babie",
+    "last_name": "babie "
+  },
+  {
+    "id": "2d085924-ba83-43bd-b914-44860c898bb8",
+    "email": "bbb@gmail.com",
+    "password": "$2b$10$oOsEkCEqNRIe3SimoqVNV.UGKE228XQhdtJkO.UKf4.jGCsi0rI.S",
+    "first_name": "bbb",
+    "last_name": "bbbb"
   }
 ]
