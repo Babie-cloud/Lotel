@@ -4,13 +4,17 @@
   "private": true,
   "scripts": {
     "ng": "ng",
-  "start": "ng serve",
-  "watch": "ng build --watch",
-  "test": "vitest run --globals", 
-  "build": "ng build"
+    "start": "ng serve",
+    "watch": "ng build --watch",
+    "test": "ng test",
+    "build": "ng build"
   },
   "dependencies": {
     "@angular/build": "^22.0.7",
+    "@angular/cli": "^22.0.7",
+    "@angular/common": "^22.0.7",
+    "@angular/compiler": "^22.0.7",
+    "@angular/core": "^22.0.7",
     "@angular/forms": "^22.0.7",
     "@angular/platform-browser": "^22.0.7",
     "@angular/platform-server": "^22.0.7",
@@ -23,7 +27,8 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "zone.js": "^0.16.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
