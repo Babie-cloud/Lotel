@@ -1,6 +1,5 @@
 name: Vérification de l'application (AngularJS + ExpressJS)
 
-# Déclencheur : On lance le robot à chaque fois que vous faites un "git push"
 on:
   push:
     branches: [ main, master ]
@@ -13,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./backend 
+        working-directory: ./xp-hotel
 
     steps:
     - name: Récupérer le code du dépôt
@@ -36,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./frontend # GitHub se place dans votre dossier Angular
+        working-directory: ./ng-hotel
 
     steps:
     - name: Récupérer le code du dépôt
