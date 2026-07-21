@@ -1,0 +1,133 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background-color: var(--color-bg, #121212);
+  color: var(--color-text, #f5f5f5);
+  font-family: var(--font-sans);
+}
+
+.legal-page {
+  min-height: 100vh;
+  background-color: var(--color-bg, #121212);
+  padding: 40px 20px 64px;
+}
+
+.legal-page__inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.legal-page__back {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: var(--color-gold, #d1b274);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--color-gold-hover, #c4a05a);
+    text-decoration: underline;
+  }
+}
+
+.legal-page__header {
+  margin-bottom: 36px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(209, 178, 116, 0.3);
+}
+
+.legal-page__brand {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold, #d1b274);
+}
+
+.legal-page__header h1 {
+  margin: 0 0 10px;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.legal-page__updated {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted, #aaa);
+}
+
+.legal-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: legal;
+}
+
+.legal-list > li {
+  counter-increment: legal;
+  margin-bottom: 28px;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.legal-list > li h2 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-gold, #d1b274);
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+
+  &::before {
+    content: counter(legal) ".";
+    color: var(--color-gold-hover, #c4a05a);
+    font-variant-numeric: tabular-nums;
+    min-width: 1.5rem;
+  }
+}
+
+.legal-list p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-muted, #ccc);
+}
+
+.legal-list ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.legal-list ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text-muted, #ccc);
+
+  &::marker {
+    color: var(--color-gold, #d1b274);
+  }
+}
+
+.legal-list a {
+  color: var(--color-gold, #d1b274);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+@media (max-width: 640px) {
+  .legal-page {
+    padding: 24px 16px 48px;
+  }
+}

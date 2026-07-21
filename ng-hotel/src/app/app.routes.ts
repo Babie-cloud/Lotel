@@ -25,8 +25,8 @@ export const routes: Routes = [
     { path: 'navbar', component: Navbar },
     { path: 'footer', component: Footer },
     { path: 'payment', component: Payment},
-    { path: 'PolicyPrivacy', component: PolicyPrivacy},
-    { path: 'Terms', component: Terms },
+    { path: 'policy-privacy', component: PolicyPrivacy },
+    { path: 'terms', component: Terms },
 
     {
     path: 'admin-dashboard',
