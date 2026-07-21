@@ -1,28 +1,11 @@
 const express = require('express');
-const fs = require('fs');
-const path = require('path');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const { v4: uuidv4 } = require('uuid');
+const User = require('../models/User');
 
 const router = express.Router();
 
-const USERS_FILE = path.join(__dirname, 'users.json');
-const JWT_SECRET = 'change-moi-en-production'; 
-
-
-function readUsers() {
-  if (!fs.existsSync(USERS_FILE)) {
-    fs.writeFileSync(USERS_FILE, '[]', 'utf-8');
-  }
-  const data = fs.readFileSync(USERS_FILE, 'utf-8');
-  return JSON.parse(data);
-}
-
-function writeUsers(users) {
-  fs.writeFileSync(USERS_FILE, JSON.stringify(users, null, 2), 'utf-8');
-}
-
+const JWT_SECRET = process.env.JWT_SECRET;
 
 router.post('/register', async (req, res) => {
   try {
@@ -36,34 +19,28 @@ router.post('/register', async (req, res) => {
       return res.status(400).json({ message: 'Les mots de passe ne correspondent pas.' });
     }
 
-    const users = readUsers();
-    const existingUser = users.find((u) => u.email === email);
-
+    const existingUser = await User.findOne({ email });
     if (existingUser) {
       return res.status(409).json({ message: 'Un compte existe déjà avec cet email.' });
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    const newUser = {
-      id: uuidv4(),
+    const newUser = await User.create({
       email,
       password: hashedPassword,
       first_name: first_name || '',
       last_name: last_name || '',
-    };
+    });
 
-    users.push(newUser);
-    writeUsers(users);
-
-    const token = jwt.sign({ sub: newUser.id, email: newUser.email }, JWT_SECRET, {
+    const token = jwt.sign({ sub: newUser._id.toString(), email: newUser.email }, JWT_SECRET, {
       expiresIn: '2h',
     });
 
     res.status(201).json({
       token,
       user: {
-        id: newUser.id,
+        id: newUser._id,
         email: newUser.email,
         first_name: newUser.first_name,
         last_name: newUser.last_name,
@@ -75,7 +52,6 @@ router.post('/register', async (req, res) => {
   }
 });
 
-
 router.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -84,27 +60,24 @@ router.post('/login', async (req, res) => {
       return res.status(400).json({ message: 'Email et mot de passe requis.' });
     }
 
-    const users = readUsers();
-    const user = users.find((u) => u.email === email);
-
+    const user = await User.findOne({ email });
     if (!user) {
       return res.status(401).json({ message: 'Email ou mot de passe incorrect.' });
     }
 
     const passwordMatches = await bcrypt.compare(password, user.password);
-
     if (!passwordMatches) {
       return res.status(401).json({ message: 'Email ou mot de passe incorrect.' });
     }
 
-    const token = jwt.sign({ sub: user.id, email: user.email }, JWT_SECRET, {
+    const token = jwt.sign({ sub: user._id.toString(), email: user.email }, JWT_SECRET, {
       expiresIn: '2h',
     });
 
     res.json({
       token,
       user: {
-        id: user.id,
+        id: user._id,
         email: user.email,
         first_name: user.first_name,
         last_name: user.last_name,
