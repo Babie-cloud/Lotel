@@ -14,6 +14,12 @@ export interface Hotel {
   description: string;
   image: string;
   chambresDisponibles: number;
+  capaciteParChambre?: number;
+  chambresRestantes?: number;
+  chambresNecessaires?: number | null;
+  placesRestantes?: number;
+  disponible?: boolean;
+  messages?: string[];
 }
 
 export interface HotelSearchFilters {

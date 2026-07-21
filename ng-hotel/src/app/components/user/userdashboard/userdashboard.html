@@ -1,141 +1,206 @@
 <!-- Liste de tous les hôtels en partenariat avec nous!-->
 <div class="container">
-    <h1> Les hôtels en partenariat avec nous</h1>
+  <h1>Les hôtels en partenariat avec nous</h1>
 
-    <!--  Formulaire de filtrage d'hôtels-->
-    <div class="nav-search">
-        <h3>Filtrez par Ville pour joindre votre destination rapidement</h3>
+  <div class="nav-search">
+    <h3>Filtrez par Ville pour joindre votre destination rapidement</h3>
 
-        <form class="d-flex gap-2" [formGroup]="searchForm" (ngSubmit)="searchHotels()" role="search">
-
-          <div class="Form-group">
-            <input class="form-control me-2" type="text" formControlName="codePostal" placeholder="Code postal ex. 31200" aria-label="Code postal" />
-            @if (searchForm.get('codePostal')?.invalid && searchForm.get('codePostal')?.touched) 
-            {
-              <div class="text-danger">Code postal invalide (5 chiffres).</div>
-            }
-          </div>
-          
-
-          <div class="Form-group">
-            <input
-              class="form-control me-2"
-              type="date"
-              formControlName="dateDebut"
-              aria-label="Date de début"
-            />
-          </div>
-
-          <div class="Form-group">
-            <input
-              class="form-control me-2"
-              type="date"
-              formControlName="dateFin"
-              aria-label="Date de fin"
-            />
-            @if (searchForm.hasError('dateRangeInvalid') && searchForm.get('dateFin')?.touched) {
-              <div class="text-danger">La date de fin doit être après la date de début.</div>
-            }
-          </div>
-
-          <div class="Form-group">
-            <input
-              class="form-control me-2"
-              type="number"
-              formControlName="personnes"
-              placeholder="Nombre de personnes"
-              min="1"
-              aria-label="Nombre de personnes"
-            />
-            @if (searchForm.get('personnes')?.invalid && searchForm.get('personnes')?.touched) {
-              <div class="text-danger">Doit être 1 ou plus.</div>
-            }
-          </div>
-          <div class="Form-group">
-
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Ville
+    <form class="search-form" [formGroup]="searchForm" (ngSubmit)="searchHotels()" role="search">
+      <div class="Form-group">
+        <label for="ville">Ville</label>
+        <div class="dropdown">
+          <a
+            class="nav-link dropdown-toggle form-control search-control"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            id="ville"
+          >
+            {{ selectedVille || 'Choisir une ville' }}
           </a>
           <ul class="dropdown-menu">
             <h5>Île-de-France</h5>
-            <li><a class="dropdown-item" (click)="filterByVille('Paris')">Paris</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Paris', $event)">Paris</a></li>
             <li><hr class="dropdown-divider"></li>
             <h5>Auvergne-Rhône-Alpes</h5>
-            <li><a class="dropdown-item" (click)="filterByVille('Lyon')">Lyon</a></li>
-            <li><a class="dropdown-item" (click)="filterByVille('Saint-Étienne')">Saint-Étienne</a></li>
-            <li><a class="dropdown-item" (click)="filterByVille('Clermont-Ferrand')">Clermont-Ferrand</a></li>
-            <li><a class="dropdown-item" (click)="filterByVille('Annecy')">Annecy</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Lyon', $event)">Lyon</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Saint-Étienne', $event)">Saint-Étienne</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Clermont-Ferrand', $event)">Clermont-Ferrand</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Annecy', $event)">Annecy</a></li>
             <li><hr class="dropdown-divider"></li>
             <h5>Provence-Alpes-Côte d'Azur</h5>
-            <li><a class="dropdown-item" (click)="filterByVille('Marseille')">Marseille</a></li>
-            <li><a class="dropdown-item" (click)="filterByVille('Toulon')">Toulon</a></li>
-            <li><a class="dropdown-item" (click)="filterByVille('Nice')">Nice</a></li>
-            <li><a class="dropdown-item" (click)="filterByVille('Aix-en-Provence')">Aix-en-Provence</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Marseille', $event)">Marseille</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Toulon', $event)">Toulon</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Nice', $event)">Nice</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Aix-en-Provence', $event)">Aix-en-Provence</a></li>
             <li><hr class="dropdown-divider"></li>
             <h5>Occitanie</h5>
-            <li><a class="dropdown-item" (click)="filterByVille('Montpellier')">Montpellier</a></li>
-            <li><a class="dropdown-item" (click)="filterByVille('Toulouse')">Toulouse</a></li>
-            <li><a class="dropdown-item" (click)="filterByVille('Nîmes')">Nîmes</a></li>
-            <li><a class="dropdown-item" (click)="filterByVille('Perpignan')">Perpignan</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Montpellier', $event)">Montpellier</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Toulouse', $event)">Toulouse</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Nîmes', $event)">Nîmes</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Perpignan', $event)">Perpignan</a></li>
             <li><hr class="dropdown-divider"></li>
             <h5>Nouvelle-Aquitaine</h5>
-            <li><a class="dropdown-item" (click)="filterByVille('Bordeaux')">Bordeaux</a></li>
-            <li><a class="dropdown-item" (click)="filterByVille('Limoges')">Limoges</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Bordeaux', $event)">Bordeaux</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Limoges', $event)">Limoges</a></li>
             <li><hr class="dropdown-divider"></li>
             <h5>Bretagne</h5>
-            <li><a class="dropdown-item" (click)="filterByVille('Brest')">Brest</a></li>
-            <li><a class="dropdown-item" (click)="filterByVille('Rennes')">Rennes</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Brest', $event)">Brest</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Rennes', $event)">Rennes</a></li>
             <li><hr class="dropdown-divider"></li>
             <h5>Grand Est</h5>
-            <li><a class="dropdown-item" (click)="filterByVille('Strasbourg')">Strasbourg</a></li>
-            <li><a class="dropdown-item" (click)="filterByVille('Reims')">Reims</a></li>
-            <li><a class="dropdown-item" (click)="filterByVille('Nancy')">Nancy</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Strasbourg', $event)">Strasbourg</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Reims', $event)">Reims</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Nancy', $event)">Nancy</a></li>
             <li><hr class="dropdown-divider"></li>
             <h5>Hauts-de-France</h5>
-            <li><a class="dropdown-item" (click)="filterByVille('Lille')">Lille</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Lille', $event)">Lille</a></li>
             <li><hr class="dropdown-divider"></li>
             <h5>Normandie</h5>
-            <li><a class="dropdown-item" (click)="filterByVille('Le Havre')">Le Havre</a></li>
-            <li><a class="dropdown-item" (click)="filterByVille('Rouen')">Rouen</a></li>
-
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Le Havre', $event)">Le Havre</a></li>
+            <li><a class="dropdown-item" href="#" (click)="filterByVille('Rouen', $event)">Rouen</a></li>
           </ul>
-          </div>
+        </div>
+        <div class="field-hint"></div>
+      </div>
 
-          <button class="btn border-success btn-outline-success" type="submit">Rechercher</button>
-          <button class="btn btn-outline-secondary" type="button" (click)="resetSearch()">Réinitialiser</button>
-        </form>
+      <div class="Form-group">
+        <label for="codePostal">Code postal</label>
+        @if (codesPostauxDisponibles.length > 0) {
+          <select
+            id="codePostal"
+            class="form-control search-control"
+            formControlName="codePostal"
+            aria-label="Code postal"
+          >
+            <option value="">Tous les codes postaux</option>
+            @for (cp of codesPostauxDisponibles; track cp) {
+              <option [value]="cp">{{ cp }}</option>
+            }
+          </select>
+        } @else {
+          <input
+            id="codePostal"
+            class="form-control search-control"
+            type="text"
+            formControlName="codePostal"
+            placeholder="ex. 31200"
+            aria-label="Code postal"
+            (blur)="onCodePostalChange()"
+          />
+        }
+        <div class="field-hint">
+          @if (searchForm.get('codePostal')?.hasError('pattern') && searchForm.get('codePostal')?.touched) {
+            <span class="text-danger">Code postal invalide (5 chiffres).</span>
+          }
+          @if (searchForm.get('codePostal')?.hasError('codePostalVilleMismatch')) {
+            <span class="text-danger">Ce code postal ne correspond pas à la ville.</span>
+          }
+        </div>
+      </div>
 
-        
+      <div class="Form-group">
+        <label for="dateDebut">Début du séjour <span class="text-danger">*</span></label>
+        <input
+          id="dateDebut"
+          class="form-control search-control"
+          type="date"
+          formControlName="dateDebut"
+          aria-label="Date de début"
+        />
+        <div class="field-hint">
+          @if (searchForm.get('dateDebut')?.invalid && searchForm.get('dateDebut')?.touched) {
+            <span class="text-danger">Date de début requise.</span>
+          }
+        </div>
+      </div>
 
-    </div>
+      <div class="Form-group">
+        <label for="dateFin">Fin du séjour <span class="text-danger">*</span></label>
+        <input
+          id="dateFin"
+          class="form-control search-control"
+          type="date"
+          formControlName="dateFin"
+          aria-label="Date de fin"
+        />
+        <div class="field-hint">
+          @if (searchForm.hasError('dateRangeInvalid') && searchForm.get('dateFin')?.touched) {
+            <span class="text-danger">La fin doit être après le début.</span>
+          }
+          @if (searchForm.get('dateFin')?.hasError('required') && searchForm.get('dateFin')?.touched) {
+            <span class="text-danger">Date de fin requise.</span>
+          }
+        </div>
+      </div>
 
-     <div class="content">
+      <div class="Form-group Form-group--personnes">
+        <label for="personnes">Personnes <span class="text-danger">*</span></label>
+        <input
+          id="personnes"
+          class="form-control search-control"
+          type="number"
+          formControlName="personnes"
+          min="1"
+          aria-label="Nombre de personnes"
+        />
+        <div class="field-hint">
+          @if (searchForm.get('personnes')?.value) {
+            <span>{{ chambresPour(searchForm.get('personnes')?.value) }} chambre(s) · 2 pers./chambre</span>
+          }
+          @if (searchForm.get('personnes')?.invalid && searchForm.get('personnes')?.touched) {
+            <span class="text-danger">Doit être 1 ou plus.</span>
+          }
+        </div>
+      </div>
+
+      <div class="search-actions">
+        <button class="btn border-success btn-outline-success" type="submit">Rechercher</button>
+        <button class="btn btn-outline-secondary" type="button" (click)="resetSearch()">Réinitialiser</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="content">
     @for (hotel of hotels; track hotel.id) {
       <div class="block" (click)="showDetail(hotel)">
         <div class="hotel-image-wrap">
-          <img [src]="hotel.image" [alt]="hotel.nom" class="hotel-image"/>
+          <img [src]="hotel.image" [alt]="hotel.nom" class="hotel-image" />
         </div>
         <div class="hotel-body">
           <h2 class="hotel-name">{{ hotel.nom }}</h2>
-          <p class="hotel-city">{{ hotel.ville }}</p>
+          <p class="hotel-city">{{ hotel.codePostal }} {{ hotel.ville }}</p>
           <p class="hotel-price">{{ hotel.prix }} € <span>/ nuit</span></p>
           <p class="hotel-desc">{{ hotel.description }}</p>
+          @if (hotel.chambresRestantes != null) {
+            <p class="hotel-desc">
+              {{ hotel.chambresRestantes }} chambre(s) · {{ hotel.placesRestantes }} place(s)
+            </p>
+          }
           <div class="hotel-meta">
             <span class="hotel-rating"><i class="fa-solid fa-star">{{ hotel.note }}</i></span>
             <button
               type="button"
               class="btn hotel-btn"
+              [disabled]="hotel.disponible === false"
               (click)="showDetail(hotel); $event.stopPropagation()"
             >
               Réserver / Payer
             </button>
           </div>
+
+          @if (hotel.messages && hotel.messages.length > 0) {
+            <div class="alert alert-warning py-1 px-2 mt-2 mb-0">
+              @for (msg of hotel.messages; track msg) {
+                <div>{{ msg }}</div>
+              }
+            </div>
+          }
         </div>
       </div>
     } @empty {
       <p>Aucun hôtel ne correspond à ta recherche.</p>
     }
   </div>
-
-  
 </div>
