@@ -65,8 +65,8 @@ export class Signup {
           console.error('[Signup] Erreur d\'inscription', err);
           this.errorMessage.set(
             err.status === 409
-              ? 'Un compte existe déjà avec cet email.'
-              : 'Une erreur est survenue. Veuillez réessayer.'
+              ? 'An account already exists with this email.'
+              : 'Something went wrong. Please try again.'
           );
         },
       });

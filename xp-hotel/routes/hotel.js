@@ -57,7 +57,7 @@ router.get('/hotel-search', async (req, res) => {
       const fin = new Date(dateFin);
       if (Number.isNaN(debut.getTime()) || Number.isNaN(fin.getTime()) || fin <= debut) {
         return res.status(400).json({
-          message: 'La date de fin doit être après la date de début.',
+          message: 'End date must be after start date.',
         });
       }
     }
@@ -82,19 +82,19 @@ router.get('/hotel-search', async (req, res) => {
           );
 
           if (chambresRestantes <= 0) {
-            messages.push('Aucune chambre disponible pour ces dates.');
+            messages.push('No rooms available for these dates.');
           }
         }
 
-        // Règle : 1 chambre = 2 personnes
-        // Pas assez d'espace si chambres < personnes / 2
+        // Rule: 1 room = 2 guests
+        // Not enough space if rooms < guests / 2
         if (nbPersonnes && !Number.isNaN(nbPersonnes) && nbPersonnes > 0) {
           chambresNecessaires = chambresNecessairesPour(nbPersonnes);
 
           if (chambresRestantes < nbPersonnes / 2) {
             messages.push(
-              `Il n'y a pas assez d'espaces : ${nbPersonnes} personne(s) nécessitent ` +
-                `${chambresNecessaires} chambre(s), seulement ${chambresRestantes} disponible(s).`
+              `Not enough space: ${nbPersonnes} guest(s) require ` +
+                `${chambresNecessaires} room(s), only ${chambresRestantes} available.`
             );
           }
         }
@@ -111,18 +111,18 @@ router.get('/hotel-search', async (req, res) => {
       })
     );
 
-    // Avec filtre personnes/dates : on montre les hôtels, y compris ceux sans assez d'espace
-    // (bouton désactivé + message), pour que l'utilisateur comprenne pourquoi.
+    // With guests/dates filters: show hotels including those without enough space
+    // (disabled button + message) so the user understands why.
     res.json(resultatsAvecDisponibilite);
   } catch (err) {
-    console.error('[hotel-search] Erreur', err);
-    res.status(500).json({ message: 'Erreur serveur.' });
+    console.error('[hotel-search] Error', err);
+    res.status(500).json({ message: 'Server error.' });
   }
 });
 
 router.get('/hotels/:id', (req, res) => {
   const hotel = hotels.find((h) => h.id === parseInt(req.params.id, 10));
-  if (!hotel) return res.status(404).json({ message: 'Hôtel non trouvé' });
+  if (!hotel) return res.status(404).json({ message: 'Hotel not found' });
   res.json(hotel);
 });
 

@@ -1,24 +1,24 @@
 <div id="contact" class="bg-sombre contact">
   <div class="contact-form-container bg-sombre">
-    <h4>Connectez-vous</h4>
+    <h4>Log in</h4>
 
     <form class="contact-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
       <div class="Form-group">
-        <label>Email ou Nom d'utilisateur</label>
+        <label>Email or username</label>
         <input
           type="text"
           formControlName="email"
-          placeholder="Ex: jean@mail.com"
+          placeholder="e.g. jean@mail.com"
           required
         />
         @if (loginForm.get('email')?.invalid && loginForm.get('email')?.touched) {
-          <div class="text-danger">Veuillez entrer un email valide.</div>
+          <div class="text-danger">Please enter a valid email.</div>
         }
       </div>
 
       <div class="Form-group">
-        <label>Mot de passe</label>
+        <label>Password</label>
         <input
           type="password"
           formControlName="password"
@@ -26,7 +26,7 @@
           required
         />
         @if (loginForm.get('password')?.invalid && loginForm.get('password')?.touched) {
-          <div class="text-danger">Le mot de passe doit contenir au moins 8 caractères.</div>
+          <div class="text-danger">Password must be at least 8 characters.</div>
         }
       </div>
 
@@ -35,12 +35,12 @@
       }
 
       <button type="submit" class="btn btn-submit" [disabled]="loginForm.invalid || isSubmitting()">
-        {{ isSubmitting() ? 'Connexion en cours...' : 'Se connecter' }}
+        {{ isSubmitting() ? 'Signing in...' : 'Log in' }}
       </button>
 
       <p class="redirect-text">
-        Vous n'avez pas de compte ?
-        <a routerLink="/signup" class="text-gold">S'inscrire</a>
+        Don't have an account?
+        <a routerLink="/signup" class="text-gold">Sign up</a>
       </p>
 
     </form>

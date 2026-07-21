@@ -1,9 +1,9 @@
 <div class="payment-page">
   @if (!selectedHotel) {
     <div class="payment-empty">
-      <h2>Paiement</h2>
+      <h2>Payment</h2>
       <p class="text-danger">{{ errorMessage }}</p>
-      <a routerLink="/userdashboard" class="btn btn-submit">Retour aux hôtels</a>
+      <a routerLink="/userdashboard" class="btn btn-submit">Back to hotels</a>
     </div>
   } @else if (!isPaying) {
     <div class="hotel-detail">
@@ -12,24 +12,24 @@
       <p>{{ selectedHotel.adresse }}, {{ selectedHotel.codePostal }} {{ selectedHotel.ville }}</p>
       <p>{{ selectedHotel.description }}</p>
       <p>
-        <strong>{{ selectedHotel.prix }} € / nuit</strong>
-         {{ selectedHotel.chambresDisponibles }} chambres disponibles
+        <strong>{{ selectedHotel.prix }} € / night</strong>
+         {{ selectedHotel.chambresDisponibles }} rooms available
       </p>
       <div class="actions">
-        <a routerLink="/userdashboard" class="btn btn-secondary">Retour</a>
-        <button type="button" class="btn btn-submit" (click)="goToPayment()">Payer</button>
+        <a routerLink="/userdashboard" class="btn btn-secondary">Back</a>
+        <button type="button" class="btn btn-submit" (click)="goToPayment()">Pay</button>
       </div>
     </div>
   } @else {
     <div class="payment-container">
-      <h2>Paiement — {{ selectedHotel.nom }}</h2>
+      <h2>Payment — {{ selectedHotel.nom }}</h2>
 
       @if (isLoading) {
-        <p>Chargement du formulaire de paiement...</p>
+        <p>Loading payment form...</p>
       }
 
       @if (montant !== null) {
-        <p class="montant">Montant à régler : <strong>{{ montant }} €</strong></p>
+        <p class="montant">Amount due: <strong>{{ montant }} €</strong></p>
       }
 
       <div id="payment-element"></div>
@@ -44,7 +44,7 @@
 
       <div class="actions">
         <button type="button" class="btn btn-secondary" (click)="goBack()" [disabled]="isProcessing">
-          Retour
+          Back
         </button>
         <button
           type="button"
@@ -52,7 +52,7 @@
           (click)="onSubmit()"
           [disabled]="isLoading || !formReady || isProcessing || !!successMessage"
         >
-          {{ isProcessing ? 'Traitement en cours...' : 'Payer maintenant' }}
+          {{ isProcessing ? 'Processing...' : 'Pay now' }}
         </button>
       </div>
     </div>

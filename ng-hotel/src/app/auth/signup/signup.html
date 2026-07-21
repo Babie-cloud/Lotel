@@ -1,76 +1,76 @@
 <div class="contact">
   <div class="contact-form-container">
-    <h4>Créer un compte</h4>
+    <h4>Create an account</h4>
 
     <form class="contact-form" [formGroup]="SignupForm" (ngSubmit)="onSubmit()">
 
       <div class="Form-group">
-        <label for="floatingName">Nom de famille</label>
+        <label for="floatingName">Last name</label>
         <input
           type="text"
           id="floatingName"
-          placeholder="Votre nom"
+          placeholder="Your last name"
           formControlName="name"
           required
         />
         @if (SignupForm.get('name')?.invalid && SignupForm.get('name')?.touched) {
-          <div class="text-danger">Le nom est requis.</div>
+          <div class="text-danger">Last name is required.</div>
         }
       </div>
 
       <div class="Form-group">
-        <label for="floatingPrenom">Prénom</label>
+        <label for="floatingPrenom">First name</label>
         <input
           type="text"
           id="floatingPrenom"
-          placeholder="Votre prénom"
+          placeholder="Your first name"
           formControlName="prenom"
           required
         />
         @if (SignupForm.get('prenom')?.invalid && SignupForm.get('prenom')?.touched) {
-          <div class="text-danger">Le prénom est requis.</div>
+          <div class="text-danger">First name is required.</div>
         }
       </div>
 
       <div class="Form-group">
-        <label for="floatingInput">Adresse Email</label>
+        <label for="floatingInput">Email address</label>
         <input
           type="email"
           id="floatingInput"
-          placeholder="Ex: jean@mail.com"
+          placeholder="e.g. jean@mail.com"
           formControlName="email"
           required
         />
         @if (SignupForm.get('email')?.invalid && SignupForm.get('email')?.touched) {
-          <div class="text-danger">Veuillez entrer un email valide.</div>
+          <div class="text-danger">Please enter a valid email.</div>
         }
       </div>
 
       <div class="Form-group">
-        <label for="floatingPassword">Mot de passe</label>
+        <label for="floatingPassword">Password</label>
         <input
           type="password"
           id="floatingPassword"
-          placeholder="Minimum 8 caractères"
+          placeholder="At least 8 characters"
           formControlName="password"
           required
         />
         @if (SignupForm.get('password')?.invalid && SignupForm.get('password')?.touched) {
-          <div class="text-danger">Le mot de passe doit contenir au moins 8 caractères.</div>
+          <div class="text-danger">Password must be at least 8 characters.</div>
         }
       </div>
 
       <div class="Form-group">
-        <label for="floatingConfirmPassword">Confirmer le mot de passe</label>
+        <label for="floatingConfirmPassword">Confirm password</label>
         <input
           type="password"
           id="floatingConfirmPassword"
-          placeholder="Répétez le mot de passe"
+          placeholder="Re-enter your password"
           formControlName="confirmPassword"
           required
         />
         @if (SignupForm.hasError('passwordMismatch') && SignupForm.get('confirmPassword')?.touched) {
-          <div class="text-danger">Les mots de passe ne correspondent pas.</div>
+          <div class="text-danger">Passwords do not match.</div>
         }
       </div>
 
@@ -79,12 +79,12 @@
       }
 
       <button class="btn btn-submit" type="submit" [disabled]="SignupForm.invalid || isSubmitting()">
-        {{ isSubmitting() ? 'Création en cours...' : "S'inscrire" }}
+        {{ isSubmitting() ? 'Creating account...' : 'Sign up' }}
       </button>
 
       <p class="redirect-text">
-        Vous avez déjà un compte ?
-        <a routerLink="/login" class="text-gold">Se connecter</a>
+        Already have an account?
+        <a routerLink="/login" class="text-gold">Log in</a>
       </p>
     </form>
   </div>

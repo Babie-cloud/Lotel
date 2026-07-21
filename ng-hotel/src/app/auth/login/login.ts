@@ -50,8 +50,8 @@ export class Login {
         console.error('[Login] Erreur de connexion', err);
         this.errorMessage.set(
           err.status === 401
-            ? 'Email ou mot de passe incorrect.'
-            : 'Une erreur est survenue. Veuillez réessayer.'
+            ? 'Incorrect email or password.'
+            : 'Something went wrong. Please try again.'
         );
       },
     });

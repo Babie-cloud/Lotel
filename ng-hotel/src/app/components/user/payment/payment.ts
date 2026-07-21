@@ -45,7 +45,7 @@ export class Payment implements OnDestroy {
 
     if (!this.selectedHotel) {
       this.errorMessage =
-        "Aucun hôtel sélectionné. Retourne au tableau de bord et clique sur « Voir les détails ».";
+        'No hotel selected. Return to the dashboard and click “View details”.';
     }
   }
 
@@ -66,7 +66,7 @@ export class Payment implements OnDestroy {
 
     if (!this.stripe) {
       this.errorMessage =
-        'Stripe n’est pas configuré (clé publique invalide). Impossible d’afficher le formulaire.';
+        'Stripe is not configured (invalid public key). Unable to display the form.';
       this.isLoading = false;
       return;
     }
@@ -78,11 +78,11 @@ export class Payment implements OnDestroy {
           this.clientSecret = response.clientSecret;
 
           if (!this.stripe) {
-            this.errorMessage = 'Stripe non initialisé.';
+            this.errorMessage = 'Stripe not initialized.';
             return;
           }
           if (!response.clientSecret) {
-            this.errorMessage = 'Le serveur n’a pas renvoyé de clientSecret.';
+            this.errorMessage = 'The server did not return a clientSecret.';
             return;
           }
 
@@ -94,7 +94,7 @@ export class Payment implements OnDestroy {
           await new Promise((r) => setTimeout(r, 50));
           const mountEl = document.getElementById('payment-element');
           if (!mountEl) {
-            this.errorMessage = 'Zone de paiement introuvable dans la page.';
+            this.errorMessage = 'Payment area not found on the page.';
             return;
           }
 
@@ -104,9 +104,8 @@ export class Payment implements OnDestroy {
         } catch (e) {
           console.error(e);
           this.errorMessage =
-            'Impossible d’afficher le formulaire Stripe. Vérifie les clés pk/sk (même compte Test).';
+            'Unable to display the Stripe form. Check the pk/sk keys (same Test account).';
         } finally {
-          // Stripe sort de la zone Angular → forcer la mise à jour du bouton
           this.zone.run(() => {
             this.isLoading = false;
             this.cdr.markForCheck();
@@ -117,7 +116,7 @@ export class Payment implements OnDestroy {
         const apiMsg = err?.error?.message as string | undefined;
         this.errorMessage =
           apiMsg ??
-          "Impossible d'initialiser le paiement. Vérifie que l’API xp-hotel tourne sur le port 3000.";
+          'Unable to initialize payment. Check that the xp-hotel API is running on port 3000.';
         this.isLoading = false;
       },
     });
@@ -144,7 +143,7 @@ export class Payment implements OnDestroy {
     const { error: submitError } = await this.elements.submit();
     if (submitError) {
       this.zone.run(() => {
-        this.errorMessage = submitError.message ?? 'Formulaire invalide.';
+        this.errorMessage = submitError.message ?? 'Invalid form.';
         this.isProcessing = false;
       });
       return;
@@ -163,12 +162,12 @@ export class Payment implements OnDestroy {
       this.isProcessing = false;
 
       if (error) {
-        this.errorMessage = error.message ?? 'Le paiement a échoué. Vérifiez vos informations.';
+        this.errorMessage = error.message ?? 'Payment failed. Please check your details.';
         return;
       }
 
       if (paymentIntent && paymentIntent.status === 'succeeded') {
-        this.successMessage = 'Paiement réussi ! Votre réservation est confirmée.';
+        this.successMessage = 'Payment successful! Your reservation is confirmed.';
       }
     });
   }

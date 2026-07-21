@@ -12,16 +12,16 @@ router.post('/register', async (req, res) => {
     const { email, password, confirm_password, first_name, last_name } = req.body;
 
     if (!email || !password) {
-      return res.status(400).json({ message: 'Email et mot de passe requis.' });
+      return res.status(400).json({ message: 'Email and password are required.' });
     }
 
     if (confirm_password !== undefined && password !== confirm_password) {
-      return res.status(400).json({ message: 'Les mots de passe ne correspondent pas.' });
+      return res.status(400).json({ message: 'Passwords do not match.' });
     }
 
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      return res.status(409).json({ message: 'Un compte existe déjà avec cet email.' });
+      return res.status(409).json({ message: 'An account already exists with this email.' });
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -48,7 +48,7 @@ router.post('/register', async (req, res) => {
     });
   } catch (err) {
     console.error('[Register] Erreur serveur', err);
-    res.status(500).json({ message: 'Erreur serveur.' });
+    res.status(500).json({ message: 'Server error.' });
   }
 });
 
@@ -57,17 +57,17 @@ router.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
     if (!email || !password) {
-      return res.status(400).json({ message: 'Email et mot de passe requis.' });
+      return res.status(400).json({ message: 'Email and password are required.' });
     }
 
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(401).json({ message: 'Email ou mot de passe incorrect.' });
+      return res.status(401).json({ message: 'Incorrect email or password.' });
     }
 
     const passwordMatches = await bcrypt.compare(password, user.password);
     if (!passwordMatches) {
-      return res.status(401).json({ message: 'Email ou mot de passe incorrect.' });
+      return res.status(401).json({ message: 'Incorrect email or password.' });
     }
 
     const token = jwt.sign({ sub: user._id.toString(), email: user.email }, JWT_SECRET, {
@@ -85,7 +85,7 @@ router.post('/login', async (req, res) => {
     });
   } catch (err) {
     console.error('[Login] Erreur serveur', err);
-    res.status(500).json({ message: 'Erreur serveur.' });
+    res.status(500).json({ message: 'Server error.' });
   }
 });
 

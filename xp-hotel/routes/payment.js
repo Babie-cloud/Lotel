@@ -6,7 +6,7 @@ router.post('/create-intent', async (req, res) => {
   try {
     if (!process.env.STRIPE_SECRET_KEY) {
       return res.status(500).json({
-        message: 'une clé est manquante!',
+        message: 'A key is missing!',
       });
     }
 
@@ -16,10 +16,10 @@ router.post('/create-intent', async (req, res) => {
     const hotel = hotels.find((h) => h.id === hotelId);
 
     if (!hotel) {
-      return res.status(404).json({ message: 'Hôtel introuvable.' });
+      return res.status(404).json({ message: 'Hotel not found.' });
     }
     if (!nuits || nuits < 1) {
-      return res.status(400).json({ message: 'Nombre de nuits invalide.' });
+      return res.status(400).json({ message: 'Invalid number of nights.' });
     }
 
     const montantEnCentimes = Math.round(hotel.prix * nuits * 100);
@@ -40,22 +40,22 @@ router.post('/create-intent', async (req, res) => {
       montant: montantEnCentimes / 100,
     });
   } catch (err) {
-    console.error('Erreur création PaymentIntent :', err);
-    res.status(500).json({ message: 'Erreur lors de la création du paiement.' });
+    console.error('Error creating PaymentIntent:', err);
+    res.status(500).json({ message: 'Error creating payment.' });
   }
 });
 
 router.get('/status/:paymentIntentId', async (req, res) => {
   try {
     if (!process.env.STRIPE_SECRET_KEY) {
-      return res.status(500).json({ message: 'STRIPE_SECRET_KEY manquante.' });
+      return res.status(500).json({ message: 'STRIPE_SECRET_KEY is missing.' });
     }
 
     const paymentIntent = await stripe.paymentIntents.retrieve(req.params.paymentIntentId);
     res.json({ status: paymentIntent.status });
   } catch (err) {
-    console.error('Erreur récupération statut :', err);
-    res.status(500).json({ message: 'Erreur lors de la vérification du paiement.' });
+    console.error('Error retrieving status:', err);
+    res.status(500).json({ message: 'Error verifying payment.' });
   }
 });
 
