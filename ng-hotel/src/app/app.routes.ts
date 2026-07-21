@@ -14,6 +14,8 @@ import { ReservationDetails } from './components/hotel/reservation-details/reser
 import { Settings } from './components/hotel/settings/settings';
 import { ListeHotel } from './components/user/liste-hotel/liste-hotel';
 import { Payment } from './components/user/payment/payment';
+import { PolicyPrivacy } from './layout/policy-privacy/policy-privacy';
+import { Terms } from './layout/terms/terms';
 
 export const routes: Routes = [
     { path: '', component: Landingpage },
@@ -23,6 +25,8 @@ export const routes: Routes = [
     { path: 'navbar', component: Navbar },
     { path: 'footer', component: Footer },
     { path: 'payment', component: Payment},
+    { path: 'PolicyPrivacy', component: PolicyPrivacy},
+    { path: 'Terms', component: Terms },
 
     {
     path: 'admin-dashboard',

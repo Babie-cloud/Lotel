@@ -134,7 +134,7 @@
 
   &:hover:not(:disabled) {
     background-color: var(--color-gold-hover);
-    color: #fff;
+    color: var( --color-gold-active);
   }
 
   &:disabled {
@@ -144,7 +144,6 @@
   }
 }
 
-/* ——— Liens de redirection (login / signup / reset) ——— */
 .redirect-text,
 .signup-redirect {
   text-align: center;
