@@ -1,17 +1,17 @@
-# 1. Configuration du Build pour Angular (Frontend)
 [build]
-  command = "cd ng-hotel && npm install && npm run build -- --configuration=production"
-  publish = "ng-hotel/dist/ng-hotel/browser" # /!\ Vérifie le chemin exact de ton dossier de build Angular
+  command = "cd ng-hotel && npm install && npm run build -- --configuration=production && cd ../xp-hotel && npm install"
+  publish = "ng-hotel/dist/ng-hotel/browser"
 
-# 2. Configuration pour Express (Backend / Functions)
 [functions]
-  directory = "xp-hotel"
+  directory = "netlify/functions"
 
-# 3. Redirection pour éviter les erreurs 404 au rafraîchissement d'Angular
+# Cette redirection API doit être AVANT la redirection SPA
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-[build.environment]
-  NODE_VERSION = "22"
