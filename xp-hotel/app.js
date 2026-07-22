@@ -17,8 +17,6 @@ var paymentRouter = require('./routes/payment');
 
 var app = express();
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
 
 const allowedOrigins = ['http://localhost:4200', 'https://lotel.netlify.app'];
 
@@ -39,14 +37,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Connexion à MongoDB avant de traiter chaque requête (sans reconnecter si déjà connecté)
 app.use(async (req, res, next) => {
   try {
     await connectDB();
     next();
   } catch (err) {
     console.error('[DB] Erreur de connexion', err);
-    res.status(500).json({ message: 'Database connection error.' });
+    res.status(500).json({ message: 'Erreur de connexion à la base de données.' });
   }
 });
 
@@ -61,10 +58,11 @@ app.use(function(req, res, next) {
 });
 
 app.use(function(err, req, res, next) {
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
   res.status(err.status || 500);
-  res.render('error');
+  res.json({
+    message: err.message,
+    error: req.app.get('env') === 'development' ? err : {},
+  });
 });
 
 module.exports = app;

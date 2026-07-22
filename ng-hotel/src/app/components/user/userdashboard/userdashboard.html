@@ -1,12 +1,13 @@
+<!-- Liste de tous les hôtels en partenariat avec nous!-->
 <div class="container">
-  <h1>Our partner hotels</h1>
+  <h1>Les hôtels en partenariat avec nous</h1>
 
   <div class="nav-search">
-    <h3>Filter by city to reach your destination faster</h3>
+    <h3>Filtrez par Ville pour joindre votre destination rapidement</h3>
 
     <form class="search-form" [formGroup]="searchForm" (ngSubmit)="searchHotels()" role="search">
       <div class="Form-group">
-        <label for="ville">City</label>
+        <label for="ville">Ville</label>
         <div class="dropdown">
           <a
             class="nav-link dropdown-toggle form-control search-control"
@@ -16,7 +17,7 @@
             aria-expanded="false"
             id="ville"
           >
-            {{ selectedVille || 'Choose a city' }}
+            {{ selectedVille || 'Choisir une ville' }}
           </a>
           <ul class="dropdown-menu">
             <h5>Île-de-France</h5>
@@ -65,15 +66,15 @@
       </div>
 
       <div class="Form-group">
-        <label for="codePostal">Postal code</label>
+        <label for="codePostal">Code postal</label>
         @if (codesPostauxDisponibles.length > 0) {
           <select
             id="codePostal"
             class="form-control search-control"
             formControlName="codePostal"
-            aria-label="Postal code"
+            aria-label="Code postal"
           >
-            <option value="">All postal codes</option>
+            <option value="">Tous les codes postaux</option>
             @for (cp of codesPostauxDisponibles; track cp) {
               <option [value]="cp">{{ cp }}</option>
             }
@@ -84,79 +85,79 @@
             class="form-control search-control"
             type="text"
             formControlName="codePostal"
-            placeholder="e.g. 31200"
-            aria-label="Postal code"
+            placeholder="ex. 31200"
+            aria-label="Code postal"
             (blur)="onCodePostalChange()"
           />
         }
         <div class="field-hint">
           @if (searchForm.get('codePostal')?.hasError('pattern') && searchForm.get('codePostal')?.touched) {
-            <span class="text-danger">Invalid postal code (5 digits).</span>
+            <span class="text-danger">Code postal invalide (5 chiffres).</span>
           }
           @if (searchForm.get('codePostal')?.hasError('codePostalVilleMismatch')) {
-            <span class="text-danger">This postal code does not match the city.</span>
+            <span class="text-danger">Ce code postal ne correspond pas à la ville.</span>
           }
         </div>
       </div>
 
       <div class="Form-group">
-        <label for="dateDebut">Check-in <span class="text-danger">*</span></label>
+        <label for="dateDebut">Début du séjour <span class="text-danger">*</span></label>
         <input
           id="dateDebut"
           class="form-control search-control"
           type="date"
           formControlName="dateDebut"
-          aria-label="Check-in date"
+          aria-label="Date de début"
         />
         <div class="field-hint">
           @if (searchForm.get('dateDebut')?.invalid && searchForm.get('dateDebut')?.touched) {
-            <span class="text-danger">Check-in date is required.</span>
+            <span class="text-danger">Date de début requise.</span>
           }
         </div>
       </div>
 
       <div class="Form-group">
-        <label for="dateFin">Check-out <span class="text-danger">*</span></label>
+        <label for="dateFin">Fin du séjour <span class="text-danger">*</span></label>
         <input
           id="dateFin"
           class="form-control search-control"
           type="date"
           formControlName="dateFin"
-          aria-label="Check-out date"
+          aria-label="Date de fin"
         />
         <div class="field-hint">
           @if (searchForm.hasError('dateRangeInvalid') && searchForm.get('dateFin')?.touched) {
-            <span class="text-danger">Check-out must be after check-in.</span>
+            <span class="text-danger">La fin doit être après le début.</span>
           }
           @if (searchForm.get('dateFin')?.hasError('required') && searchForm.get('dateFin')?.touched) {
-            <span class="text-danger">Check-out date is required.</span>
+            <span class="text-danger">Date de fin requise.</span>
           }
         </div>
       </div>
 
       <div class="Form-group Form-group--personnes">
-        <label for="personnes">Guests <span class="text-danger">*</span></label>
+        <label for="personnes">Personnes <span class="text-danger">*</span></label>
         <input
           id="personnes"
           class="form-control search-control"
           type="number"
           formControlName="personnes"
           min="1"
-          aria-label="Number of guests"
+          aria-label="Nombre de personnes"
         />
         <div class="field-hint">
           @if (searchForm.get('personnes')?.value) {
-            <span>{{ chambresPour(searchForm.get('personnes')?.value) }} room(s) · 2 guests/room</span>
+            <span>{{ chambresPour(searchForm.get('personnes')?.value) }} chambre(s) · 2 pers./chambre</span>
           }
           @if (searchForm.get('personnes')?.invalid && searchForm.get('personnes')?.touched) {
-            <span class="text-danger">Must be 1 or more.</span>
+            <span class="text-danger">Doit être 1 ou plus.</span>
           }
         </div>
       </div>
 
       <div class="search-actions">
-        <button class="btn border-success btn-outline-success" type="submit">Search</button>
-        <button class="btn btn-outline-secondary" type="button" (click)="resetSearch()">Reset</button>
+        <button class="btn border-success btn-outline-success" type="submit">Rechercher</button>
+        <button class="btn btn-outline-secondary" type="button" (click)="resetSearch()">Réinitialiser</button>
       </div>
     </form>
   </div>
@@ -170,11 +171,11 @@
         <div class="hotel-body">
           <h2 class="hotel-name">{{ hotel.nom }}</h2>
           <p class="hotel-city">{{ hotel.codePostal }} {{ hotel.ville }}</p>
-          <p class="hotel-price">{{ hotel.prix }} € <span>/ night</span></p>
+          <p class="hotel-price">{{ hotel.prix }} € <span>/ nuit</span></p>
           <p class="hotel-desc">{{ hotel.description }}</p>
           @if (hotel.chambresRestantes != null) {
             <p class="hotel-desc">
-              {{ hotel.chambresRestantes }} room(s) · {{ hotel.placesRestantes }} spot(s)
+              {{ hotel.chambresRestantes }} chambre(s) · {{ hotel.placesRestantes }} place(s)
             </p>
           }
           <div class="hotel-meta">
@@ -185,7 +186,7 @@
               [disabled]="hotel.disponible === false"
               (click)="showDetail(hotel); $event.stopPropagation()"
             >
-              Book / Pay
+              Réserver / Payer
             </button>
           </div>
 
@@ -199,7 +200,7 @@
         </div>
       </div>
     } @empty {
-      <p>No hotels match your search.</p>
+      <p>Aucun hôtel ne correspond à ta recherche.</p>
     }
   </div>
 </div>
