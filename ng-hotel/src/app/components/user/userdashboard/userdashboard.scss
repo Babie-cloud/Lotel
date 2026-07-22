@@ -266,7 +266,7 @@
   line-height: 1.45;
   color: var(--color-text-dark-muted);
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  //-webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   word-wrap: break-word;
