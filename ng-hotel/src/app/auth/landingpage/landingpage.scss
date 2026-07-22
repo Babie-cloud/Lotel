@@ -3,11 +3,32 @@
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-sans);
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 .py-5 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: clamp(1.5rem, 4vw, 3rem);
+  padding-bottom: clamp(1.5rem, 4vw, 3rem);
+}
+
+/* ——— Navbar ——— */
+.navbar {
+  width: 100%;
+  max-width: 100%;
+
+  .container {
+    color: inherit;
+  }
+
+  .nav-link {
+    white-space: nowrap;
+  }
+}
+
+.offcanvas {
+  max-width: min(100vw, 320px);
 }
 
 /* ——— Hero ——— */
@@ -16,28 +37,36 @@
     linear-gradient(rgba(18, 18, 18, 0.7), var(--color-bg)),
     url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200') no-repeat
       center center / cover;
-  padding: 100px 20px;
+  padding: clamp(56px, 12vw, 100px) clamp(16px, 4vw, 20px);
   text-align: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 
   .display-3 {
-    font-size: 3.5rem;
+    font-size: clamp(1.75rem, 7vw, 3.5rem);
     font-weight: 800;
     color: #fff;
     margin-bottom: 10px;
-    letter-spacing: 2px;
+    letter-spacing: 0.04em;
+    line-height: 1.15;
+    word-wrap: break-word;
   }
 
   .hero-subtitle {
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 3.5vw, 1.4rem);
     color: var(--color-text-muted);
     font-weight: 300;
     margin-bottom: 30px;
+    padding: 0 4px;
   }
 
   .hero-buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 12px 15px;
   }
 
   .btn {
@@ -75,7 +104,7 @@
 
 /* ——— Sections ——— */
 .section-title {
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 4vw, 2rem);
   color: var(--color-gold);
   border-bottom: 2px solid var(--color-border-subtle);
   padding-bottom: 10px;
@@ -84,14 +113,16 @@
 
 .grid-2-cols {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: clamp(16px, 3vw, 30px);
+  width: 100%;
 }
 
 .grid-3-cols {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: clamp(16px, 3vw, 30px);
+  width: 100%;
 }
 
 .bg-dark-card {
@@ -100,11 +131,13 @@
   border: 1px solid var(--color-border-dark);
   overflow: hidden;
   box-shadow: var(--shadow-card);
+  min-width: 0;
+  max-width: 100%;
 }
 
 .card-body {
-  padding: 40px;
-  font-size: 1.1rem;
+  padding: clamp(20px, 4vw, 40px);
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   line-height: 1.6;
   color: #ddd;
 }
@@ -119,28 +152,34 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  min-height: 250px;
+  min-height: 200px;
+  max-height: 360px;
 }
 
 .testimonial-card {
   background-size: cover;
   background-position: center;
   border-radius: var(--radius-lg);
-  height: 300px;
+  min-height: 240px;
+  height: auto;
+  aspect-ratio: 4 / 3;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 25px;
+  padding: clamp(16px, 3vw, 25px);
   border: 1px solid var(--color-border-subtle);
   box-shadow: var(--shadow-card);
+  min-width: 0;
+  max-width: 100%;
 
   .testimonial-content {
     h3 {
-      font-size: 1.25rem;
+      font-size: clamp(1rem, 3vw, 1.25rem);
       color: #fff;
       font-weight: 600;
       font-style: italic;
       margin-bottom: 10px;
+      word-wrap: break-word;
     }
 
     .location {
@@ -154,18 +193,25 @@
 .main-footer {
   background-color: var(--color-bg-footer);
   border-top: 1px solid var(--color-border-footer);
-  padding: 60px 20px 30px;
+  padding: clamp(36px, 6vw, 60px) clamp(16px, 4vw, 20px) 30px;
   margin-top: 60px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 
   .footer-grid {
     max-width: var(--container-max);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    gap: clamp(24px, 4vw, 40px);
+    width: 100%;
   }
 
   .footer-col {
+    min-width: 0;
+
     h5 {
       color: var(--color-gold);
       font-size: 1.1rem;
@@ -196,6 +242,7 @@
 
   .newsletter-col {
     grid-column: span 1;
+    min-width: 0;
 
     p {
       color: var(--color-text-dim);
@@ -207,6 +254,7 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
+      width: 100%;
 
       input {
         background-color: #1a1a1a;
@@ -215,6 +263,9 @@
         padding: 10px;
         border-radius: var(--radius-sm);
         outline: none;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
 
         &:focus {
           border-color: var(--color-gold);
@@ -222,7 +273,7 @@
       }
 
       .btn-submit {
-        width: auto;
+        width: 100%;
         margin-top: 0;
       }
     }
@@ -236,5 +287,33 @@
     text-align: center;
     color: var(--color-text-faint);
     font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section .hero-buttons .btn {
+    flex: 1 1 auto;
+    min-width: 140px;
+    text-align: center;
+  }
+
+  .card-img {
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  .testimonial-card {
+    aspect-ratio: 16 / 10;
+    min-height: 200px;
   }
 }

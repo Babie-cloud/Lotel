@@ -1,5 +1,11 @@
 @use 'variables';
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Utilitaires partagés */
 .bg-gold {
   background-color: var(--color-gold-hover);
@@ -25,6 +31,10 @@
     border-color var(--transition-fast);
 }
 
-img {
-  border-radius: var(--radius-md);
+img,
+video,
+iframe,
+svg {
+  max-width: 100%;
+  height: auto;
 }

@@ -2,14 +2,18 @@
 
 /* ——— Section contact */
 .contact {
-  padding: 60px 40px;
+  padding: clamp(32px, 6vw, 60px) clamp(16px, 4vw, 40px);
   background-color: var(--color-bg);
   border-radius: var(--radius-lg);
   color: var(--color-text);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .contact > h2 {
-  font-size: 2.25rem;
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
   color: var(--color-gold);
   margin: 0 0 0.5rem;
 }
@@ -26,22 +30,28 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 40px;
+  gap: clamp(20px, 4vw, 40px);
   margin-bottom: 40px;
+  width: 100%;
 }
 
 .contact-info,
 .contact-form-container {
-  flex: 1;
+  flex: 1 1 280px;
+  min-width: 0;
+  max-width: 100%;
   background-color: var(--color-bg-elevated);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
+  box-sizing: border-box;
 }
 
 .contact-info {
   text-align: left;
   color: var(--color-text);
-  padding: 30px;
+  padding: clamp(18px, 4vw, 30px);
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 .contact-info h4,
@@ -54,6 +64,7 @@
 .contact-info a {
   color: var(--color-gold);
   text-decoration: none;
+  word-break: break-word;
 
   &:hover {
     text-decoration: underline;
@@ -61,9 +72,10 @@
 }
 
 .contact-form-container {
+  width: 100%;
   max-width: 480px;
   margin: 0 auto;
-  padding: 30px;
+  padding: clamp(18px, 4vw, 30px);
 }
 
 .contact-form {
@@ -82,6 +94,7 @@
   flex-direction: column;
   gap: 8px;
   width: 100%;
+  min-width: 0;
 }
 
 .Form-group label {
@@ -93,6 +106,7 @@
 
 .Form-group input,
 .Form-group textarea,
+.Form-group select,
 .contact-form input,
 .contact-form textarea {
   background-color: var(--color-bg-input);
@@ -103,6 +117,7 @@
   font-size: 0.95rem;
   font-family: inherit;
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
   transition: border-color var(--transition-fast);
 
@@ -134,7 +149,7 @@
 
   &:hover:not(:disabled) {
     background-color: var(--color-gold-hover);
-    color: var( --color-gold-active);
+    color: var(--color-gold-active);
   }
 
   &:disabled {
@@ -165,4 +180,25 @@
   margin-top: 30px;
   border-radius: var(--radius-lg);
   overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+
+  iframe {
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
+    border: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form-container {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }

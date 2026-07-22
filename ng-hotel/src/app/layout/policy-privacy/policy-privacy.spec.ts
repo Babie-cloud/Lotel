@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { provideRouter } from '@angular/router';
 import { PolicyPrivacy } from './policy-privacy';
 
 describe('PolicyPrivacy', () => {
@@ -9,6 +9,7 @@ describe('PolicyPrivacy', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [PolicyPrivacy],
+      providers: [provideRouter([])],
     }).compileComponents();
 
     fixture = TestBed.createComponent(PolicyPrivacy);
