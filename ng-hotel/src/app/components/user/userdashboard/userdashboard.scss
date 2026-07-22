@@ -13,7 +13,7 @@
 }
 
 .nav-search {
-  //display: flex;
+  display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 14px;
@@ -25,7 +25,9 @@
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;
+  position: relative;
+  z-index: 5;
 }
 
 .nav-search h3 {
@@ -51,6 +53,7 @@
   gap: 6px;
   min-width: 0;
   max-width: 100%;
+  position: relative;
 }
 
 .Form-group label {
@@ -100,11 +103,33 @@
   white-space: nowrap;
   flex: 1 1 auto;
   min-width: 120px;
+  font-weight: 600;
+}
+
+.search-actions .btn-outline-success {
+  color: #6ee7a0;
+  border-color: #6ee7a0;
+
+  &:hover {
+    background-color: #6ee7a0;
+    color: #10281a;
+  }
+}
+
+.search-actions .btn-outline-secondary {
+  color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.55);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #10281a;
+  }
 }
 
 .nav-search .dropdown {
   width: 100%;
   min-width: 0;
+  position: relative;
 }
 
 .nav-search .dropdown-toggle {
@@ -118,7 +143,7 @@
   padding: 0 14px;
   border: 1px solid var(--color-gold-hover);
   border-radius: var(--radius-sm);
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.04);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -131,6 +156,7 @@
 }
 
 .dropdown-menu {
+  z-index: 1050;
   max-height: min(60vh, 400px);
   max-width: min(100vw - 24px, 320px);
   overflow-x: hidden;
@@ -144,6 +170,7 @@
     padding: 6px 16px 2px;
     font-size: 0.8rem;
     margin: 0;
+    color: var(--color-gold-hover);
   }
 }
 
@@ -208,8 +235,7 @@
   width: 100%;
   aspect-ratio: 16 / 10;
   overflow: hidden;
-  background:
-    linear-gradient(135deg, #2b2b2b 0%, #1c1c1c 50%, #3a3224 100%);
+  background: linear-gradient(135deg, #2b2b2b 0%, #1c1c1c 50%, #3a3224 100%);
 }
 
 .hotel-image {
@@ -266,7 +292,6 @@
   line-height: 1.45;
   color: var(--color-text-dark-muted);
   display: -webkit-box;
-  //-webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   word-wrap: break-word;
@@ -322,10 +347,6 @@
 }
 
 @media (max-width: 1100px) {
-  .search-form {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .search-actions {
     grid-column: 1 / -1;
     padding-top: 0;
@@ -339,7 +360,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .search-form {
     grid-template-columns: 1fr;
   }
@@ -365,5 +386,9 @@
       width: 100%;
       text-align: center;
     }
+  }
+
+  .dropdown-menu {
+    max-width: calc(100vw - 24px);
   }
 }

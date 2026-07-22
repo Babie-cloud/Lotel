@@ -7,12 +7,10 @@ import { Navbar } from './layout/navbar/navbar';
 import { Footer } from './layout/footer/footer';
 import { AdminDashboard } from './components/admin-dashboard/admin-dashboard';
 import { Userdashboard } from './components/user/userdashboard/userdashboard';
-import { Reservation } from './components/user/reservation/reservation';
 import { Hoteldashboard } from './components/hotel/hoteldashboard/hoteldashboard';
 import { ConfirmReservation } from './components/hotel/confirm-reservation/confirm-reservation';
 import { ReservationDetails } from './components/hotel/reservation-details/reservation-details';
 import { Settings } from './components/hotel/settings/settings';
-import { ListeHotel } from './components/user/liste-hotel/liste-hotel';
 import { Payment } from './components/user/payment/payment';
 import { PolicyPrivacy } from './layout/policy-privacy/policy-privacy';
 import { Terms } from './layout/terms/terms';
@@ -37,11 +35,6 @@ export const routes: Routes = [
     {
     path: 'userdashboard',
     component: Userdashboard,
-    children: [
-        { path: 'reservation', component: Reservation },
-        { path: 'liste-hotel', component: ListeHotel}
-       
-    ]
     }, 
     {
         path : 'hotel-dashboard',

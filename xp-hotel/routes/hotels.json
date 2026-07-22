@@ -9,7 +9,7 @@
     "prix": 189,
     "note": 4.6,
     "description": "Charming hotel in the heart of the Marais, steps from museums and boutiques.",
-    "image": "https://www.google.com/search?client=ubuntu-sn&hs=M8z&sca_esv=114ce2f88324942a&channel=fs&sxsrf=APpeQnsrqj1Ioz4BVdBTMoeIigyp8JM6zg:1784024973199&udm=2&fbs=ABfTbFWOrgz9K2hXBbZIW9KJVa13dEK31SPP8sGuYUi6-uhprL-GCNfdyreUPfzVSnI8rgwcLs94Qa7sVoDnGu9WidjJKJABi7w-2bWjtQ72_wcZC7D46i4OeUGtBGrRM-lweJ8T4-h4QxiKzkqy1HM40bw6sUG915ZBzh7WHQMfqM1p8n3DCoqLA_idgHr_7xddFuXPV6u36R__uCcHbFBXk5tUg3SvSFP_fhwL5CFw9YLunaszDJ8&q=H%C3%B4tel+Le+Marais+%C3%89l%C3%A9gance&sa=X&ved=2ahUKEwiQ5LD2-tGVAxXL1AIHHfakENsQtKgLegQIFhAB&biw=1366&bih=604&dpr=1#sv=CAMSURoyKhBlLTlXa2NBWm44T1FaSWtNMg45V2tjQVpuOE9RWklrTToOQk1DNmdYM1VFOGZSVU0gBCoXCgFzEhBlLTlXa2NBWm44T1FaSWtNGAEwARgHILuh8J4GSggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200",
     "chambresDisponibles": 8,
     "capaciteParChambre": 2
   },
@@ -23,7 +23,7 @@
     "prix": 245,
     "note": 4.8,
     "description": "Stunning Eiffel Tower views from a refined establishment.",
-    "image": "https://www.google.com/search?q=H%C3%B4tel+Tour+Eiffel+Vue&client=ubuntu-sn&hs=R8z&sca_esv=114ce2f88324942a&channel=fs&udm=2&biw=1366&bih=604&sxsrf=APpeQnv1bQwWPkWqnp8P1Q4zI1uivbnRZA%3A1784024978126&ei=kg9WavihB_rbi-gPxLflyQg&ved=0ahUKEwj4st34-tGVAxX67QIHHcRbOYkQ4dUDCBE&uact=5&oq=H%C3%B4tel+Tour+Eiffel+Vue&gs_lp=Egtnd3Mtd2l6LWltZyIWSMO0dGVsIFRvdXIgRWlmZmVsIFZ1ZTIGEAAYCBgeMgYQABgIGB4yBhAAGAgYHjIGEAAYCBgeMgYQABgIGB4yBhAAGAgYHjIGEAAYCBgeMgYQABgIGB4yBhAAGAgYHjIGEAAYCBgeSMX0A1DFCFi37gNwAngAkAEAmAGLAaAB7wSqAQMwLjW4AQPIAQD4AQH4AQKYAgegAs0GqAIKwgIKECMYyQIY6gIYJ8ICBxAjGMkCGCfCAgoQABiABBiKBRhDwgILEAAYgAQYsQMYgwHCAg4QABiABBiKBRixAxiDAcICCBAAGIAEGLEDwgIFEAAYgASYAxKSBwMyLjWgB-YbsgcDMC41uAeTBsIHBzMtMi40LjHIB7EBgAgB&sclient=gws-wiz-img#sv=CAMSURoyKhBlLTZQWFRDWlkxQlRTcF9NMg42UFhUQ1pZMUJUU3BfTToOUlhoZTVnTWRRbjliX00gBCoXCgFzEhBlLTZQWFRDWlkxQlRTcF9NGAEwARgHINLN69QMSggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200",
     "chambresDisponibles": 4,
     "capaciteParChambre": 2
   },
@@ -37,7 +37,7 @@
     "prix": 132,
     "note": 4.4,
     "description": "Located in the heart of the Presqu'ile, close to the Rhone riverbanks.",
-    "image": "https://www.google.com/search?q=H%C3%B4tel+des+Lumi%C3%A8res&client=ubuntu-sn&hs=2oK&sca_esv=114ce2f88324942a&channel=fs&udm=2&biw=1366&bih=604&sxsrf=APpeQntVPKncnGO9BP-Ob01gXaCaeBjviw%3A1784025053184&ei=3Q9WaojlCq-Mi-gP0JfwoQs&ved=0ahUKEwjIx8Kc-9GVAxUvxgIHHdALPLQQ4dUDCBE&uact=5&oq=H%C3%B4tel+des+Lumi%C3%A8res&gs_lp=Egtnd3Mtd2l6LWltZyIUSMO0dGVsIGRlcyBMdW1pw6hyZXMyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEi5BVCSA1iSA3ABeACQAQCYAVigAViqAQExuAEDyAEA-AEC-AEBmAICoAKbAcICBhAAGAgYHpgDAIgGAZIHAzEuMaAH7wSyBwMwLjG4B2_CBwUzLTEuMcgHMoAIAQ&sclient=gws-wiz-img#sv=CAMSURoyKhBlLV9fZkxrbjM3dGEzOU1NMg5fX2ZMa24zN3RhMzlNTToOV3lGNGZaeVQ1TnBhRk0gBCoXCgFzEhBlLV9fZkxrbjM3dGEzOU1NGAEwARgHIJC-5sEOSggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=1200",
     "chambresDisponibles": 10,
     "capaciteParChambre": 2
   },
@@ -51,7 +51,7 @@
     "prix": 89,
     "note": 4.1,
     "description": "Comfortable stay near the historic center and the train station.",
-    "image": "https://www.google.com/search?q=H%C3%B4tel+du+Forez&client=ubuntu-sn&hs=0Uf&sca_esv=114ce2f88324942a&channel=fs&udm=2&biw=1366&bih=604&sxsrf=APpeQnviXUGYNMb4mJzTT1BCJbZOdjnxdw%3A1784025094321&ei=BhBWaoOeE4_Ci-gPvb39yA0&ved=0ahUKEwiDuZGw-9GVAxUP4QIHHb1eH9kQ4dUDCBE&uact=5&oq=H%C3%B4tel+du+Forez&gs_lp=Egtnd3Mtd2l6LWltZyIPSMO0dGVsIGR1IEZvcmV6MgQQABgeMgQQABgeMgYQABgIGB4yBhAAGAgYHjIGEAAYCBgeMgYQABgIGB5IjwxQ0wVY0wVwAXgAkAEAmAGIAaABiAGqAQMwLjG4AQPIAQD4AQH4AQKYAgKgAtsBqAIKwgIKECMYyQIY6gIYJ5gDNZIHAzEuMaAH2QSyBwMwLjG4B6YBwgcFNC0xLjHIB0KACAE&sclient=gws-wiz-img#sv=CAMSURoyKhBlLXVhdHU1TmpGVXBWY0hNMg51YXR1NU5qRlVwVmNITToOcUtvRWpWc1dvaUJVRU0gBCoXCgFzEhBlLXVhdHU1TmpGVXBWY0hNGAEwARgHIJj7ooEMSggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200",
     "chambresDisponibles": 12,
     "capaciteParChambre": 2
   },
@@ -65,7 +65,7 @@
     "prix": 98,
     "note": 4.3,
     "description": "Views of the volcanic hills, ideal for exploring Auvergne Volcanoes Park.",
-    "image": "https://www.google.com/search?q=H%C3%B4tel+des+Volcans&client=ubuntu-sn&hs=NWf&sca_esv=114ce2f88324942a&channel=fs&udm=2&biw=1366&bih=604&sxsrf=APpeQnsIjr2J_i9oz8zIygauGmxKZWLhQw%3A1784025179786&ei=WxBWasrML9igi-gP95qhoQY&ved=0ahUKEwiK5vHY-9GVAxVY0AIHHXdNKGQQ4dUDCBE&uact=5&oq=H%C3%B4tel+des+Volcans&gs_lp=Egtnd3Mtd2l6LWltZyISSMO0dGVsIGRlcyBWb2xjYW5zMgUQABiABDIEEAAYHjIEEAAYHjIEEAAYHkitBlDCA1jCA3ABeACQAQCYAXGgAXGqAQMwLjG4AQPIAQD4AQL4AQGYAgKgAqkBwgIGEAAYCBgemAMAiAYBkgcDMS4xoAeqArIHAzAuMbgHhQHCBwUzLTEuMcgHKIAIAQ&sclient=gws-wiz-img#sv=CAMSURoyKhBlLWNUSlk1d2hXZ3E2aUxNMg5jVEpZNXdoV2dxNmlMTToOYmdsNXZLcndraDR1V00gBCoXCgFzEhBlLWNUSlk1d2hXZ3E2aUxNGAEwARgHIJr1_5gBSggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1200",
     "chambresDisponibles": 9,
     "capaciteParChambre": 2
   },
@@ -79,7 +79,7 @@
     "prix": 165,
     "note": 4.7,
     "description": "Facing Lake Annecy, surrounded by the Alpine mountains.",
-    "image": "https://www.hotellacbleu.com/",
+    "image": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200",
     "chambresDisponibles": 6,
     "capaciteParChambre": 2
   },
@@ -93,7 +93,7 @@
     "prix": 142,
     "note": 4.3,
     "description": "On the Old Port waterfront, near local restaurants and markets.",
-    "image": "https://www.hotelvieuxport.com/",
+    "image": "https://images.unsplash.com/photo-1544124499-58912cbddaad?q=80&w=1200",
     "chambresDisponibles": 11,
     "capaciteParChambre": 2
   },
@@ -107,7 +107,7 @@
     "prix": 105,
     "note": 4,
     "description": "Facing Toulon harbor, ideal for exploring the French Riviera.",
-    "image": "https://www.google.com/search?client=ubuntu-sn&hs=1vK&sa=X&sca_esv=114ce2f88324942a&channel=fs&sxsrf=APpeQnvGRnYznmSkzpvdalcRHdlCWUIlpQ:1784025486576&udm=2&fbs=ABfTbFUSsjWQBd6Hmy5LSjLYKyWkxHHduSEE8CXQ0YmBQYpMbN1WRXpVlWqOj-Q17Qo27klsAZ5xtg435tnYIztd__aZ1KRbIYorn3Gf-RX3giH_1waBgHVjKs9CMo_5qZsw9Tysbam3FO4pXfEjWAhvVKnXfk6kOT-AZRHiXjLhpjxRFOXb1lv4RTt7q4p-3Xhu0BR46U_9EbosYU3XcorIyv_bOLq5MOr46t2yGE0IK7mxZRHRNqI&q=H%C3%B4tel+Rade+Azur&ved=2ahUKEwih6Jbr_NGVAxU0ywIHHcQlHkMQtKgLegQIFxAB&biw=1366&bih=604&dpr=1#sv=CAMSURoyKhBlLWNUOXFzWWhSd2hwUXhNMg5jVDlxc1loUndocFF4TToOeUo1dDhYajd4QU1ZbE0gBCoXCgFzEhBlLWNUOXFzWWhSd2hwUXhNGAEwARgHIPSsgoALSggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1200",
     "chambresDisponibles": 7,
     "capaciteParChambre": 2
   },
@@ -121,7 +121,7 @@
     "prix": 210,
     "note": 4.7,
     "description": "Seafront location, minutes from Nice's old town.",
-    "image": "https://www.google.com/search?q=H%C3%B4tel+Promenade+des+Anglais&client=ubuntu-sn&hs=Nbf&sca_esv=114ce2f88324942a&channel=fs&udm=2&biw=1366&bih=604&sxsrf=APpeQnuLGaEtD3K_9R93P-e-7uYlc4XYDA%3A1784025489005&ei=kBFWavOBPfP2i-gPt9bgiQw&ved=0ahUKEwjziavs_NGVAxVz-wIHHTcrOMEQ4dUDCBE&uact=5&oq=H%C3%B4tel+Promenade+des+Anglais&gs_lp=Egtnd3Mtd2l6LWltZyIcSMO0dGVsIFByb21lbmFkZSBkZXMgQW5nbGFpczIFEAAYgAQyBBAAGB4yBBAAGB4yBhAAGAgYHjIGEAAYCBgeMgYQABgIGB4yBhAAGAgYHjIGEAAYCBgeMgYQABgIGB4yBhAAGAgYHkihD1DtCljtCnABeACQAQCYAVKgAVKqAQExuAEDyAEA-AEC-AEBmAICoAKKAcICBxAjGMkCGCeYAwCIBgGSBwMxLjGgB7cGsgcDMC4xuAd-wgcHMi0xLjAuMcgHK4AIAQ&sclient=gws-wiz-img#sv=CAMSURoyKhBlLVFaek9Rc01kYkkwaFRNMg5RWnpPUXNNZGJJMGhUTToOQXVnSmM1S3pHcDZDdE0gBCoXCgFzEhBlLVFaek9Rc01kYkkwaFRNGAEwARgHIJP737gJSggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=1200",
     "chambresDisponibles": 5,
     "capaciteParChambre": 2
   },
@@ -135,7 +135,7 @@
     "prix": 158,
     "note": 4.5,
     "description": "Elegant address on the famous plane-tree-lined avenue.",
-    "image": "https://www.google.com/search?q=H%C3%B4tel+Cours+Mirabeau&client=ubuntu-sn&hs=BH0&sca_esv=114ce2f88324942a&channel=fs&udm=2&biw=1366&bih=604&sxsrf=APpeQnvrF0T1WJGL6D738MF9g_uhTHvZ0A%3A1784025520186&ei=sBFWatz-Cq2ui-gP9vKziAw&ved=0ahUKEwjclpr7_NGVAxUt1wIHHXb5DMEQ4dUDCBE&uact=5&oq=H%C3%B4tel+Cours+Mirabeau&gs_lp=Egtnd3Mtd2l6LWltZyIVSMO0dGVsIENvdXJzIE1pcmFiZWF1MgQQABgeMgYQABgIGB5IuRBQoQ1YoQ1wAXgAkAEAmAFUoAFUqgEBMbgBA8gBAPgBAvgBAZgCAqACjgHCAgcQIxjJAhgnwgIFEAAYgASYAwCIBgGSBwMxLjGgB8sBsgcDMC4xuAdlwgcFMy0xLjHIByyACAE&sclient=gws-wiz-img#sv=CAMSURoyKhBlLXhyclhCUTBoQXNjZldNMg54cnJYQlEwaEFzY2ZXTToOd20zdENJd1lPQi1hWU0gBCoXCgFzEhBlLXhyclhCUTBoQXNjZldNGAEwARgHIKfJp98BSggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1200",
     "chambresDisponibles": 8,
     "capaciteParChambre": 2
   },
@@ -149,7 +149,7 @@
     "prix": 121,
     "note": 4.2,
     "description": "Right in the city center, close to transport and shops.",
-    "image": "https://www.google.com/search?q=H%C3%B4tel+Place+de+la+Com%C3%A9die&client=ubuntu-sn&hs=fH0&sca_esv=114ce2f88324942a&channel=fs&udm=2&biw=1366&bih=604&sxsrf=APpeQnvyJnRTVN5Iu0YjXHXWwNjoT3hxvQ%3A1784025550394&ei=zhFWasfRF4yP-d8Px_qLuQU&ved=0ahUKEwjH8M2J_dGVAxWMR_4FHUf9IlcQ4dUDCBE&uact=5&oq=H%C3%B4tel+Place+de+la+Com%C3%A9die&gs_lp=Egtnd3Mtd2l6LWltZyIbSMO0dGVsIFBsYWNlIGRlIGxhIENvbcOpZGllMgQQABgeMgQQABgeMgYQABgIGB4yCBAAGAgYHhgKMgYQABgIGB4yBhAAGAgYHkj2CFClA1ilA3ABeACQAQCYAWagAWaqAQMwLjG4AQPIAQD4AQL4AQGYAgKgApcBmAMAiAYBkgcDMS4xoAeqBLIHAzAuMbgHf8IHBTMtMS4xyAcigAgB&sclient=gws-wiz-img#sv=CAMSURoyKhBlLWdYbzZJcF94Zmx4YjlNMg5nWG82SXBfeGZseGI5TToOUS1maW1MYWkydlhNS00gBCoXCgFzEhBlLWdYbzZJcF94Zmx4YjlNGAEwARgHIL34yPAHSggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1200",
     "chambresDisponibles": 10,
     "capaciteParChambre": 2
   },
@@ -163,7 +163,7 @@
     "prix": 135,
     "note": 4.4,
     "description": "Facing Toulouse City Hall, in the Pink City.",
-    "image": "https://www.google.com/search?q=H%C3%B4tel+Capitole&client=ubuntu-sn&hs=UxK&sca_esv=114ce2f88324942a&channel=fs&udm=2&biw=1366&bih=604&sxsrf=APpeQnt1mEHdKxphUw1cDn_bcxyhvZbweg%3A1784025577767&ei=6RFWavi4Lr7zi-gPpJ4_&ved=0ahUKEwi40dSW_dGVAxW--QIHHSTPDwAQ4dUDCBE&uact=5&oq=H%C3%B4tel+Capitole&gs_lp=Egtnd3Mtd2l6LWltZyIPSMO0dGVsIENhcGl0b2xlMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIEEAAYHjIEEAAYHjIEEAAYHjIEEAAYHjIEEAAYHjIGEAAYHhgKSLQHUKYEWKYEcAF4AJABAJgBYqABYqoBATG4AQPIAQD4AQL4AQGYAgKgAqgBwgIGEAAYBxgewgIGEAAYCBgewgIIEAAYCBgeGAqYAwCIBgGSBwMxLjGgB4AFsgcDMC4xuAd9wgcDNC0yyAc1gAgB&sclient=gws-wiz-img#sv=CAMSURoyKhBlLW9ac2tySmhOODJydkVNMg5vWnNrckpoTjgycnZFTToObkdUQ3lPU1lLdy1RT00gBCoXCgFzEhBlLW9ac2tySmhOODJydkVNGAEwARgHIKfqt_UKSggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=1200",
     "chambresDisponibles": 9,
     "capaciteParChambre": 2
   },
@@ -177,7 +177,7 @@
     "prix": 99,
     "note": 4.1,
     "description": "A few steps from the Nimes Arena, historic yet modern setting.",
-    "image": "https://www.google.com/search?q=H%C3%B4tel+Antique+N%C3%AEmes&client=ubuntu-sn&hs=Odf&sca_esv=114ce2f88324942a&channel=fs&udm=2&biw=1366&bih=604&sxsrf=APpeQnsOo3i_hI5pFLnwpGz_VY1VJiyHtw%3A1784025614992&ei=DhJWarKVPIavi-gPr7DS8Qc&ved=0ahUKEwiy1LSo_dGVAxWG1wIHHS-YNH4Q4dUDCBE&uact=5&oq=H%C3%B4tel+Antique+N%C3%AEmes&gs_lp=Egtnd3Mtd2l6LWltZyIVSMO0dGVsIEFudGlxdWUgTsOubWVzSNgGUOUDWOUDcAF4AJABAJgBgwGgAYMBqgEDMC4xuAEDyAEA-AEC-AEBmAIBoAIpwgIGEAAYBxgewgIIEAAYBxgeGArCAgUQABiABMICBBAAGB6YAwCIBgGSBwExoAcMsgcAuAcAwgcDNC0xyAcegAgB&sclient=gws-wiz-img#sv=CAMSURoyKhBlLWJXV0U3ak5nZWRLaU9NMg5iV1dFN2pOZ2VkS2lPTToOdlRiUVVkQXBSRjc0RU0gBCoXCgFzEhBlLWJXV0U3ak5nZWRLaU9NGAEwARgHIMXk-KMHSggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200",
     "chambresDisponibles": 12,
     "capaciteParChambre": 2
   },
@@ -191,7 +191,7 @@
     "prix": 88,
     "note": 3.9,
     "description": "Catalan atmosphere, close to the Vermeille Coast and beaches.",
-    "image": "https://www.google.com/search?q=H%C3%B4tel+C%C3%B4te+Vermeille&client=ubuntu-sn&hs=DsK&sca_esv=114ce2f88324942a&channel=fs&udm=2&biw=1366&bih=604&sxsrf=APpeQntMRg7blvQJCmAxFPIMHteJAQE-7Q%3A1784025250324&ei=ohBWarixE6-H9u8PpIPOmQo&ved=0ahUKEwi4isP6-9GVAxWvg_0HHaSBM6MQ4dUDCBE&uact=5&oq=H%C3%B4tel+C%C3%B4te+Vermeille&gs_lp=Egtnd3Mtd2l6LWltZyIWSMO0dGVsIEPDtHRlIFZlcm1laWxsZTIEEAAYHkieC1CPCFiPCHABeACQAQCYAWWgAWWqAQMwLjG4AQPIAQD4AQL4AQGYAgKgApoBwgIFEAAYgATCAgYQABgIGB6YAwCIBgGSBwMxLjGgBy2yBwMwLjG4B3DCBwcyLTEuMC4xyAckgAgB&sclient=gws-wiz-img#sv=CAMSURoyKhBlLXVLZG85cE4zNHZXZzBNMg51S2RvOXBOMzR2V2cwTToOOFBlNEtzbUI2SjVvd00gBCoXCgFzEhBlLXVLZG85cE4zNHZXZzBNGAEwARgHIJ6l8PoOSggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1591088398332-8a7791972843?q=80&w=1200",
     "chambresDisponibles": 14,
     "capaciteParChambre": 2
   },
@@ -205,7 +205,7 @@
     "prix": 154,
     "note": 4.6,
     "description": "On the Garonne quays, near the famous Bordeaux vineyards.",
-    "image": "https://www.google.com/search?q=H%C3%B4tel+Quai+des+Chartrons&client=ubuntu-sn&hs=H4K&sca_esv=114ce2f88324942a&channel=fs&udm=2&biw=1366&bih=604&sxsrf=APpeQntY4MsAu0_fp1ALwJptxQbttSD4Sw%3A1784025998488&ei=jhNWaum7HcmgkdUPz9iMqA0&ved=0ahUKEwjpuqPf_tGVAxVJUKQEHU8sA9UQ4dUDCBE&uact=5&oq=H%C3%B4tel+Quai+des+Chartrons&gs_lp=Egtnd3Mtd2l6LWltZyIZSMO0dGVsIFF1YWkgZGVzIENoYXJ0cm9uczIEEAAYHjIGEAAYCBgeSOEQUM8KWM8KcAF4AJABAJgBfaABfaoBAzAuMbgBA8gBAPgBAfgBApgCAqACugGoAgrCAgoQIxjJAhjqAhgnmAMqkgcDMS4xoAfCAbIHAzAuMbgHkAHCBwUzLTEuMcgHLYAIAQ&sclient=gws-wiz-img#sv=CAMSURoyKhBlLXhDUHphZW9weVAwVW5NMg54Q1B6YWVvcHlQMFVuTToOLU9DT3VFZGpRTHR3Z00gBCoXCgFzEhBlLXhDUHphZW9weVAwVW5NGAEwARgHINDklfoBSggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1200",
     "chambresDisponibles": 7,
     "capaciteParChambre": 2
   },
@@ -219,7 +219,7 @@
     "prix": 79,
     "note": 4,
     "description": "Quiet establishment near the historic center and porcelain workshops.",
-    "image": "https://www.google.com/search?q=H%C3%B4tel+Porcelaine&client=ubuntu-sn&hs=Hkf&sca_esv=114ce2f88324942a&channel=fs&udm=2&biw=1366&bih=604&sxsrf=APpeQnuehAr6Dijhn-6KFsnSR-T0B_GITw%3A1784026041894&ei=uRNWatuHNvSYkdUP5vTBmA0&ved=0ahUKEwibyPzz_tGVAxV0TKQEHWZ6ENMQ4dUDCBE&uact=5&oq=H%C3%B4tel+Porcelaine&gs_lp=Egtnd3Mtd2l6LWltZyIRSMO0dGVsIFBvcmNlbGFpbmVI2hRQ4wZYmxFwAXgAkAEAmAFnoAHCAaoBAzEuMbgBA8gBAPgBAvgBAZgCAaACGsICBBAAGB7CAgYQABgIGB6YAwCIBgGSBwExoAcYsgcAuAcAwgcDMy0xyAcOgAgB&sclient=gws-wiz-img#sv=CAMSURoyKhBlLW9ad2wtVXF6M0dFVHRNMg5vWndsLVVxejNHRVR0TToON0NJeGs2RC1iZ0VTVE0gBCoXCgFzEhBlLW9ad2wtVXF6M0dFVHRNGAEwARgHIM3ts4oKSggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1200",
     "chambresDisponibles": 13,
     "capaciteParChambre": 2
   },
@@ -233,7 +233,7 @@
     "prix": 95,
     "note": 4.1,
     "description": "Harbor views, near the port and the famous Oceanopolis.",
-    "image": "https://www.google.com/search?q=H%C3%B4tel+Rade+de+Brest&client=ubuntu-sn&hs=ukf&sca_esv=114ce2f88324942a&channel=fs&udm=2&biw=1366&bih=604&sxsrf=APpeQntsrtv89znmH0AsapHJamW2Q1-oGA%3A1784026080655&ei=4BNWarTBJ5LW7M8PlfPxyAk&ved=0ahUKEwi0sbqG_9GVAxUSK_sDHZV5HJkQ4dUDCBE&uact=5&oq=H%C3%B4tel+Rade+de+Brest&gs_lp=Egtnd3Mtd2l6LWltZyIUSMO0dGVsIFJhZGUgZGUgQnJlc3RIrBNQnAxYnAxwAXgAkAEAmAFhoAFhqgEBMbgBA8gBAPgBAvgBAZgCAKACAJgDAIgGAZIHAKAHDLIHALgHAMIHAMgHAIAIAQ&sclient=gws-wiz-img#sv=CAMSURoyKhBlLUtVYXU5VzNvbzBaSUhNMg5LVWF1OVczb28wWklITToOTTFRT2ctYkJXUWFERU0gBCoXCgFzEhBlLUtVYXU5VzNvbzBaSUhNGAEwARgHIMyVna8PSggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=1200",
     "chambresDisponibles": 10,
     "capaciteParChambre": 2
   },
@@ -247,7 +247,7 @@
     "prix": 112,
     "note": 4.3,
     "description": "In the heart of the historic center, near the Brittany Parliament.",
-    "image": "https://www.google.com/search?q=H%C3%B4tel+Les+Portes+de+Bretagne&client=ubuntu-sn&hs=klf&sca_esv=114ce2f88324942a&channel=fs&udm=2&biw=1366&bih=604&sxsrf=APpeQntcC9T_Dsee7hdnZP6E_s7oBFl_vQ%3A1784026132489&ei=FBRWaoC_He-ukdUPytKkyQc&ved=0ahUKEwiAmZaf_9GVAxVvV6QEHUopKXkQ4dUDCBE&uact=5&oq=H%C3%B4tel+Les+Portes+de+Bretagne&gs_lp=Egtnd3Mtd2l6LWltZyIdSMO0dGVsIExlcyBQb3J0ZXMgZGUgQnJldGFnbmVI-w1Q0QZY0QZwAXgAkAEAmAF6oAF6qgEDMC4xuAEDyAEA-AEB-AECmAIBoAItqAIKwgIKECMYyQIY6gIYJ5gDLZIHATGgBwyyBwC4BwDCBwM0LTHIByOACAE&sclient=gws-wiz-img#sv=CAMSURoyKhBlLWl0cXNuZEd3NHYwVUNNMg5pdHFzbmRHdzR2MFVDTToOR3F5LWN2aWVpNW5XMk0gBCoXCgFzEhBlLWl0cXNuZEd3NHYwVUNNGAEwARgHINqusJ0FSggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1200",
     "chambresDisponibles": 9,
     "capaciteParChambre": 2
   },
@@ -261,7 +261,7 @@
     "prix": 138,
     "note": 4.6,
     "description": "In the picturesque Petite France district, with half-timbered houses.",
-    "image": "https://www.google.com/search?q=H%C3%B4tel+Petite+France&client=ubuntu-sn&hs=kR0&sca_esv=114ce2f88324942a&channel=fs&udm=2&biw=1366&bih=604&sxsrf=APpeQnswAYSAb2Nb1NPtQ_UjdoS3mKmp7w%3A1784026175157&ei=PxRWaoaKCa6ikdUPlv2k4A8&ved=0ahUKEwjGpcKz_9GVAxUuUaQEHZY-CfwQ4dUDCBE&uact=5&oq=H%C3%B4tel+Petite+France&gs_lp=Egtnd3Mtd2l6LWltZyIUSMO0dGVsIFBldGl0ZSBGcmFuY2UyBRAAGIAEMgQQABgeMgQQABgeMgYQABgIGB4yBhAAGAgYHjIGEAAYCBgeMgYQABgIGB4yBhAAGAgYHjIGEAAYCBgeMgYQABgIGB5I3w1QgwhYgwhwAXgAkAEAmAGCAaABggGqAQMwLjG4AQPIAQD4AQL4AQGYAgGgAqQBmAMAiAYBkgcDMC4xoAfnBrIHAzAuMbgHpAHCBwM0LTHIBx2ACAE&sclient=gws-wiz-img#sv=CAMSURoyKhBlLTd3SWRaZUg1RFl3ZkVNMg43d0lkWmVINURZd2ZFTToOVEhvVHVTbWhPbkJORU0gBCoXCgFzEhBlLTd3SWRaZUg1RFl3ZkVNGAEwARgHIInm0-sKSggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1544124499-58912cbddaad?q=80&w=1200",
     "chambresDisponibles": 6,
     "capaciteParChambre": 2
   },
@@ -275,7 +275,7 @@
     "prix": 118,
     "note": 4.4,
     "description": "Facing the cathedral, in the heart of Champagne country.",
-    "image": "https://www.google.com/search?q=H%C3%B4tel+Cath%C3%A9drale+de+Reims&client=ubuntu-sn&hs=x9K&sca_esv=114ce2f88324942a&channel=fs&udm=2&biw=1366&bih=604&sxsrf=APpeQntvbpijizRRp-VlzFvwf7fL1WFrNw%3A1784026350891&ei=7hRWatOHNvX3i-gPi9jboQo&ved=0ahUKEwjTtqiHgNKVAxX1-wIHHQvsNqQQ4dUDCBE&uact=5&oq=H%C3%B4tel+Cath%C3%A9drale+de+Reims&gs_lp=Egtnd3Mtd2l6LWltZyIbSMO0dGVsIENhdGjDqWRyYWxlIGRlIFJlaW1zSIcJULgFWLgFcAF4AJABAJgBWqABWqoBATG4AQPIAQD4AQL4AQGYAgGgAinCAgUQABiABMICBBAAGB7CAgYQABgIGB6YAwCIBgGSBwExoAcMsgcAuAcAwgcDNC0xyAcegAgB&sclient=gws-wiz-img#sv=CAMSURoyKhBlLXB4UVZLeW1BUERTbWlNMg5weFFWS3ltQVBEU21pTToOdUR4dDZiV1VZeFlDVk0gBCoXCgFzEhBlLXB4UVZLeW1BUERTbWlNGAEwARgHII_90vMMSggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1200",
     "chambresDisponibles": 8,
     "capaciteParChambre": 2
   },
@@ -289,7 +289,7 @@
     "prix": 108,
     "note": 4.5,
     "description": "On the famous UNESCO-listed square, in the center of Nancy.",
-    "image": "https://www.google.com/search?q=H%C3%B4tel+Place+Stanislas&client=ubuntu-sn&hs=ipf&sca_esv=114ce2f88324942a&channel=fs&udm=2&biw=1366&bih=604&sxsrf=APpeQnsvjI_uj8cfYKRbzw7VWxeps7U4EQ%3A1784026378074&ei=ChVWaoWJBJiwi-gPjMXPsQI&ved=0ahUKEwiFtqOUgNKVAxUY2AIHHYziMyYQ4dUDCBE&uact=5&oq=H%C3%B4tel+Place+Stanislas&gs_lp=Egtnd3Mtd2l6LWltZyIWSMO0dGVsIFBsYWNlIFN0YW5pc2xhczIEEAAYHjIGEAAYCBgeMgYQABgIGB4yBhAAGAgYHjIGEAAYCBgeSJkLUMgGWMgGcAF4AJABAJgBeaABeaoBAzAuMbgBA8gBAPgBAvgBAZgCAqACtQGYAwCIBgGSBwMxLjGgB5cDsgcDMC4xuAeYAcIHBTMtMS4xyAcrgAgB&sclient=gws-wiz-img#sv=CAMSURoyKhBlLVlhNlBTaUlKVlhxWWxNMg5ZYTZQU2lJSlZYcVlsTToONndOMlZzZXNabVE5bk0gBCoXCgFzEhBlLVlhNlBTaUlKVlhxWWxNGAEwARgHIPLcr6oGSggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1591088398332-8a7791972843?q=80&w=1200",
     "chambresDisponibles": 9,
     "capaciteParChambre": 2
   },
@@ -303,7 +303,7 @@
     "prix": 115,
     "note": 4.3,
     "description": "Flemish charm in the historic Old Lille district.",
-    "image": "https://www.hoteldelatreille.com/fr/",
+    "image": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=1200",
     "chambresDisponibles": 11,
     "capaciteParChambre": 2
   },
@@ -317,7 +317,7 @@
     "prix": 92,
     "note": 4,
     "description": "Modern UNESCO-listed architecture, facing the sea.",
-    "image": "https://www.google.com/search?client=ubuntu-sn&hs=oW0&sca_esv=114ce2f88324942a&channel=fs&sxsrf=APpeQnu9c6E4QWO6OpBb4GKCxRL1qaOQEQ:1784026489164&udm=2&fbs=ABfTbFUDadgeu2mn4mYJ8iEZ1GUDDuwRa4um-2LNhBFWIpqZc2YynYX1IYTff9gmCpUOwEKj7uMHWN-f2-kaTXrl8btoj9voxuT3xhDjUDcxLBijTgWpnXeJNzxbThVgGqtUDV7UFMJIrXoo-PD588Ja5FKtEvu6KARSTmQj1e7Hq7f8-1WeiU_avm5mAb-XgpTH-eK9tRjR&q=H%C3%B4tel+Front+de+Mer&sa=X&ved=2ahUKEwis-J_JgNKVAxUp0AIHHeRbJpMQtKgLegQIFBAB&biw=1366&bih=604&dpr=1#sv=CAMSURoyKhBlLTZpTUdqRnB2S0dLZm9NMg42aU1HakZwdktHS2ZvTToOLTVKc29odUR3QXROdU0gBCoXCgFzEhBlLTZpTUdqRnB2S0dLZm9NGAEwARgHIMC-r64ESggQARgBIAEoAQ",
+    "image": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200",
     "chambresDisponibles": 10,
     "capaciteParChambre": 2
   },
@@ -331,7 +331,7 @@
     "prix": 102,
     "note": 4.2,
     "description": "In the historic center, next to the famous Gros-Horloge.",
-    "image": "https://www.hotelcardinal.fr/rectangle/giverny-monet-cathedrale-rouen-hotel-cardinal/gros-horloge-3/",
+    "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200",
     "chambresDisponibles": 8,
     "capaciteParChambre": 2
   }

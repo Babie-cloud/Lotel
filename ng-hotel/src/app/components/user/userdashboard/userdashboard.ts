@@ -84,7 +84,6 @@ export class Userdashboard implements OnInit {
       this.searchForm.patchValue({ codePostal: '' });
     }
 
-    // Si les dates sont déjà renseignées, on lance une recherche complète
     if (this.searchForm.get('dateDebut')?.value && this.searchForm.get('dateFin')?.value) {
       this.searchHotels();
     } else {
@@ -96,7 +95,6 @@ export class Userdashboard implements OnInit {
     const cp = this.searchForm.get('codePostal')?.value;
     if (!cp || !/^[0-9]{5}$/.test(cp)) return;
 
-    // Si aucune ville n'est choisie, on déduit la ville depuis le CP
     if (!this.selectedVille) {
       const ville = Object.entries(CODES_POSTAUX_PAR_VILLE).find(([, cps]) =>
         cps.includes(cp)
@@ -116,7 +114,6 @@ export class Userdashboard implements OnInit {
 
     const { codePostal, dateDebut, dateFin, personnes } = this.searchForm.value;
 
-    // CP doit correspondre à la ville sélectionnée
     if (
       this.selectedVille &&
       codePostal &&
@@ -144,7 +141,6 @@ export class Userdashboard implements OnInit {
     this.hotelService.getHotels().subscribe((data) => (this.hotels = data));
   }
 
-  /** Nombre de chambres à réserver : 1 chambre = 2 personnes */
   chambresPour(personnes: number): number {
     return Math.ceil(personnes / 2);
   }
@@ -170,4 +166,6 @@ export class Userdashboard implements OnInit {
   pay(hotel: Hotel): void {
     this.showDetail(hotel);
   }
+
+ 
 }
