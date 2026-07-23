@@ -1,6 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
 export interface CreateIntentResponse {
   clientSecret: string;
@@ -10,7 +11,7 @@ export interface CreateIntentResponse {
 @Injectable({ providedIn: 'root' })
 export class PaymentService {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:3000/api/payment';
+  private apiUrl = `${environment.apiUrl}/payment`;
 
   createPaymentIntent(hotelId: number, nuits: number): Observable<CreateIntentResponse> {
     return this.http.post<CreateIntentResponse>(`${this.apiUrl}/create-intent`, {
